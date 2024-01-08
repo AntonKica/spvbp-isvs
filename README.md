@@ -1,5 +1,5 @@
-# SPVBP-PMISVS
-Systém na podporu vypracovania bezpečnostných projektov pre malé ISVS
+# spvbp-isvs
+Systém na podporu vypracovania bezpečnostných projektov pre (malé) ISVS
 
 - kybernetrická a informačná bezpečnosť, ISVS, bezpečnostný projekt, analýza rizík, správa rizík
 
