@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information security.md",
+                "file": "Legislativa.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3102346bad20cb59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ISMS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information security.md",
+                "file": "ISMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information security.md",
+                "file": "ISMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information security.md"
+                "file": "ISMS.md"
               }
             }
           }
@@ -146,9 +159,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fe7eb122713b82b0",
+  "active": "3102346bad20cb59",
   "lastOpenFiles": [
     "ISMS.md",
+    "Legislativa.md",
+    "The lifecycle in information security.md",
+    "Management principles.md",
+    "Security strategy.md",
+    "Information security.md",
+    "Description of the information security process.md",
+    "Glossary.md",
     "ISO standards on information security.md"
   ]
 }
