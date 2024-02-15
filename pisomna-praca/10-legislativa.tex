@@ -1,0 +1,102 @@
+\chapter{Kybernetická a informačná bezpečnosť v legislatíve}
+Kybernetická a informačná bezpečnosť je obsiahnutá v niekoľkých zákonoch, resp. vyhláškach. V niektorých je KIB 
+spomenutá okrajovo. My sa sústredíme na tie zákony a vyhlášky, ktoré kladú veľký dôraz na KIB v organizácií. 
+Rozoberieme postupne 69/2018 Z.z.\cite{69/2018}, 362/2018 Z.z\cite{362/2018}, 95/2019 Z.z\cite{95/2019} a 
+179/2020 Z.z\cite{179/2020}. Pokúsime sa z nich vytýčiť tie najrelevantnejšie informácie, keďže sú vcelku rozsiahle.
+
+% src: https://tex.stackexchange.com/a/10012
+\newcommand\lawsubtitle[1]{\begin{flushleft}\small\textit{#1}\end{flushleft}}
+
+\section{Zákon č. 69/2018 Z. z.}
+\lawsubtitle{Zákon o kybernetickej bezpečnosti a o zmene a doplnení niektorých zákonov \cite{69/2018}}
+
+V rámci tohto zákona sú vymedzené rôzne právomoci, kompetencie a povinnosti Národného bezpečnostného úradu (ďalej NBÚ).
+NBÚ spravuje štandardy, určuje národnú stratégiu KIB, spravuje jednotky pre riešenie KIB incidentov \footnote{ Tiež
+známe ako CSIRT, z angl. \textit{computer security incident response team} }, vykonáva audity, odníma certifikáty KIB, atď.
+
+Tento zákon tiež vymedzuje minimálne požiadavky na zabezpečenie KIB, pričom nezasahuje do žiadnych detailov. 
+Tieto požiadavky sú kladené na služby (a ich prevádzkovateľov), ktoré sú rozdelene na dve kategórie: 
+základná služba a digitálna služba.
+
+\textbf{Základnou službou} sa rozumie napr. prvok kritickej infraštruktúry alebo sektor bankovníctva, dopravy, 
+energetika, verejná správa a mnohé ďalšie (NBÚ udržiava kompletný zoznam), vrátane ich podsektorov. Tiež, služba 
+závislá od základnej služby je považovaná za základnú službu. Poskytovateľom základnej služby je orgán verejnej 
+moci alebo fyzická osoba.
+
+\textbf{Digitálnou službou} sa rozumie online trhovisko, internetový vyhľadávač alebo služba v oblasti cloud computingu. 
+Poskytovateľom digitálnej služby je veľká organizácia aspoň o 50 zamestnancoch a ročným obratom vyše 10 mil. eur.
+
+Nakoniec definuje 16 oblasti, pre ktoré sa majú realizovať bezpečnostné opatrenia: 
+\begin{enumerate}[a)]
+    \item organizácie kybernetickej bezpečnosti a informačnej bezpečnosti,
+    \item riadenia rizík kybernetickej bezpečnosti a informačnej bezpečnosti,
+    \item personálnej bezpečnosti,
+    \item riadenia prístupov,
+    \item riadenia kybernetickej bezpečnosti a informačnej bezpečnosti vo vzťahoch s tretími stranami,
+    \item bezpečnosti pri prevádzke informačných systémov a sietí,
+    \item hodnotenia zraniteľností a bezpečnostných aktualizácií,
+    \item ochrany proti škodlivému kódu,
+    \item sieťovej a komunikačnej bezpečnosti,
+    \item akvizície, vývoja a údržby informačných sietí a informačných systémov,
+    \item zaznamenávania udalostí a monitorovania,
+    \item fyzickej bezpečnosti a bezpečnosti prostredia,
+    \item riešenia kybernetických bezpečnostných incidentov,
+    \item kryptografických opatrení,
+    \item kontinuity prevádzky,
+    \item auditu, riadenia súladu a kontrolných činností.
+\end{enumerate}
+Avšak, tento zákon nezachádza do žiadnych detailov bezpečnostných opatrení.   
+
+\section{Vyhláška č. 362/2018 Z. z.}
+\lawsubtitle{Vyhláška Národného bezpečnostného úradu, ktorou sa ustanovuje obsah bezpečnostných opatrení, obsah a 
+štruktúra bezpečnostnej dokumentácie a rozsah všeobecných bezpečnostných opatrení \cite{362/2018}}
+
+Táto vyhláška vykonáva predpis z predchádzajúceho zákona (69/2020 Z.z. \cite{69/2018}). Detailnejšie špecifikuje obsah 
+bezpečnostných opatrení a štruktúru bezpečnostnej dokumentácie. Definuje stratégiu KIB, klasifikáciu a kategorizáciu 
+informačných systémov do troch kategórií. Detailnejšie popisuje požiadavky na bezpečnostné opatrenia všetkých 16 
+oblasti zo zákona 69/2020 Z.z. \cite{69/2018}. Napriek špecifickým požiadavkám neposkytuje ani nereferencuje žiadne 
+návody pre dosiahnutie stanovených cieľov.
+
+\section{Zákon č. 95/2019 Z. z.}
+\lawsubtitle{ Zákon o informačných technológiách vo verejnej správe a o zmene a doplnení niektorých zákonov \cite{95/2019}}
+Tento zákon ustanovuje organizáciu správy a základné požiadavky kladené na ITVS. Definuje pojmy:
+% TODO hodí sa to sem alebo ani nie
+\begin{itemize}
+  \item \textbf{informačná technológia}, prostriedok alebo postup slúžiaci na spracovávanie údajov alebo informácií 
+    v elektronickej podobe, \item \textbf{informačná služba}, funkčný celok zabezpečujúci informačnú činnosť 
+      prostredníctvom technických a technologických prostriedkov.
+\end{itemize}
+Správu ITVS vykonáva orgán vedenia (MIRRI) a orgán riadenia (ministerstvo, Generálna prokuratúra, obec a vyšší územný 
+celok, právnická osoba, atď.). Zodpovedný za správu ITVS je \textbf{správca}. Správca je (mimo iné) povinný:
+\begin{enumerate}[-]
+    \item riadiť sa všeobecne uznávanými štandardami riadenia IT a metodickými usmerneniami orgánu vedenia,
+    \item zabezpečiť riadenie rizík, riadenie bezpečnosti, identifikovať a udržiavať zoznám aktív a
+    \item zaviesť systém riadenia informačnej bezpečnosti (ISMS) a vypracovať bezpečnostný projekt pre všetky ISVS.
+\end{enumerate}
+% TODO: skús to neuseknúť
+
+\section{Vyhláška č. 179/2020 Z. z.}
+\lawsubtitle{Vyhláška Úradu podpredsedu vlády Slovenskej republiky pre investície a informatizáciu, ktorou sa ustanovuje 
+spôsob kategorizácie a obsah bezpečnostných opatrení informačných technológií verejnej správy \cite{179/2020}}
+
+Táto vyhláška vykonáva predpis z predchádzajúceho zákona (95/2019 Z.z. \cite{95/2019}). Ustanovuje kategorizáciu a 
+podrobne určuje obsah bezpečnostných opatrení ITVS. Rozdeľuje minimálne bezpečnostné opatrenia požadované od ITVS 
+do troch kategórií:
+\begin{enumerate}[-]
+  \item \textbf{kategória I}, napr. obec do 6000 obyvateľov, právnická osoba,
+  \item \textbf{kategória II}, napr. obec nad 6000 obyvateľov (mimo krajské mestá), 
+    prevádzkovateľ základných služieb kategórie I a II (podľa 362/2018 Z.z. \cite{362/2018}) a
+  \item \textbf{kategória III}, napr. krajské mesto, samosprávny kraj, rôzne úrady a kancelárie, 
+    Sociálna a zdravotná poisťovna, prevádzkoveteľ základných služieb kategórie III (podľa 362/2018 Z.z. \cite{362/2018}).
+\end{enumerate}
+Pre každú z kategórií sú v prílohe detailne enumerované minimálne bezpečnostné požiadavky (I - má najmenej, III. najviac).
+
+V tejto vyhláške je tiež explicitné vyhlásene, že vychádza z niekoľkých štandardov\footnote{ Konkrétne sú to štandardy 
+ISO/IEC 2700*}. Dáva však voľnosť použiť aj iné (ekvivalentné) štandardy, pomocou ktorých sa dosiahne rovnaký výsledok 
+bezpečnostných opatrení.
+
+\section{Zhrnutie legislatívy}
+Z hľadiska KIB zákony a vyhlášky vyžadujú od služieb, resp. ITVS aby realizovali všeobecné bezpečnostné opatrenia v
+niekoľkých oblastiach. Služby rozdeľujú do rôznych úrovní kategórií, ktoré sa líšia rozsahom minimálnych 
+bezpečnostných opatrení. Správcom týchto služieb ukladajú povinnosť vypracovať systém riadenia bezpečnosti (ISMS), 
+pričom pri plnení svojich zákonných povinností majú postupovať pomocou všeobecne uznávaných štandardov a dobrej praxe.
