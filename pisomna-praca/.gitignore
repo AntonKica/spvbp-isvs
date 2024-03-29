@@ -21,3 +21,11 @@
 # BibTeX
 *.bbl
 *.blg
+
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist

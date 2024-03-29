@@ -7,7 +7,12 @@
 \usepackage[slovak]{babel}
 \usepackage[babel]{csquotes}
 
-  \linespread{1.25}
+\usepackage[automake, acronym]{glossaries}
+\makeglossaries
+\loadglsentries{glossary}
+
+
+\linespread{1.25}
 
 \usepackage{listings}
 \lstset{frame=lines}
@@ -16,6 +21,7 @@
 \usepackage{pdfpages}
 \usepackage{url}
 \usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage[french]{cleveref}
 \usepackage{dirtytalk}
 \usepackage[shortlabels]{enumitem}
 \setlist[enumerate]{nosep}
@@ -176,6 +182,8 @@ risk managment
 
 \listoffigures
 \listoftables
+\newpage
+\printglossary[type=\acronymtype, title={Zoznam skratiek}]
 
 % ---  Koniec Zoznamov
 
@@ -185,11 +193,12 @@ risk managment
 
 \input ./00-uvod.tex
 
-\input ./10-kib.tex
-\input ./11-legislativa.tex
+\input ./11-zakladne-pojmy.tex
 \input ./12-zavadzanie-isms.tex
-\input ./13-ciele-prace.tex
-\input ./14-system.tex
+%\input ./10-kib.tex
+%\input ./11-legislativa.tex
+%\input ./13-ciele-prace.tex
+%\input ./14-system.tex
 
 \input ./20-zaver.tex
 

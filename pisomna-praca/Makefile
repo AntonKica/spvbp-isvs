@@ -6,3 +6,6 @@ main.pdf: main.tex *.tex *.bib images/*
 	bibtex main
 	pdflatex main
 	pdflatex main
+
+clean:
+	rm -f main.pdf
