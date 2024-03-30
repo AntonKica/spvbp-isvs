@@ -1,0 +1,127 @@
+  \chapter{Analýza právnych požiadaviek na bezpečnosť ISVS}
+
+% src: https://tex.stackexchange.com/a/10012
+\newcommand\lawsubtitle[1]{\begin{flushleft}\small\textit{#1}\end{flushleft}}
+
+\section{Zákon č. 69/2018 Z. z.}
+\lawsubtitle{Zákon o kybernetickej bezpečnosti a o zmene a doplnení niektorých zákonov}
+
+Zakladným zákonom (\textit{lex generalis}), ktorý definuje riešenie kybernetickej (a informačnej) bezpečnosti v SR, je
+Zákon č. 69/2018 Z. z. (\acrshort{ZoKB}). Bol prijatý v roku 2018 a prešiel niekoľkými novelizáciami \textit{373/2018 Z. z.},
+\textit{134/2020 Z. z.}, \textit{287/2021 Z. z.}, \textit{55/2022 Z. z.} a \textit{231/2022 Z. z.} Implementuje európsku
+smernicu \acrshort{NIS}, a preto explicitne hovorí o bezpečnosti informačných systémov a sieti vo všeobecnosti, v porovnaní
+s \acrshort{ZoITVS}, ktorý hovorí o bezpečnosti informácie v informačných technologiách verejnej správy.
+
+\subsection{Pôsobnosť zákona vo vzťahu k mestám a obciam, prípadne ďalším organizáciám}
+V \acrshort{ZoKB} sú explicitne vymenované povinnosti \acrfull{NBU}(ďalej Úrad) a ďalších štátnych inštitúcií (ďalej orgány
+verejnej moci). Podobne sú explicitne vymenované povinnosti poskytovateľov digitálnych služieb a prevádzkovateľov základných
+služieb. Základnú službu a prevádzkovateľa definuje \acrshort{ZoKB} v \S 3 písm. l) a m):
+\begin{quotation}
+\begin{enumerate}[a)] \setcounter{enumi}{11}
+  \item základnou službou služba, ktorá je zaradená v zozname základných služieb a
+  \begin{enumerate}[1.]
+    \item závisí od sietí a informačných systémov a je činnosťou aspoň v jednom sektore alebo podsektore podľa prílohy č. 1, alebo
+    \item je prvkom kritickej infraštruktúry, \textsuperscript{9)}
+  \end{enumerate}
+
+  \item prevádzkovateľom základnej služby orgán verejnej moci alebo osoba, ktorá prevádzkuje aspoň jednu službu podľa písmena l),
+\end{enumerate}
+\end{quotation}
+V prílohe č. 1 definuje sektory (a k ním príslušné podsektory) ako bankovníctvo, doprava, energetika, verejná správa a ďalšie.
+Prevádzkovateľmi základnej služby sú orgány verejnej moci, mesta, obce a ďalšie organizácie. 
+
+Zoznam prevádzkovateľov základných služieb je udržiavaný a spravovaný \acrshort{NBU} a spôsob zaradenia do zoznamu je obsiahnutý
+\acrshort{ZoKB} v \S 3, ods (1) písm. k):
+\begin{quotation}
+\begin{enumerate}[a)] \setcounter{enumi}{10}
+  \item na základe oznámenia ústredného orgánu, prevádzkovateľa základnej služby, poskytovateľa digitálnej služby alebo z
+  vlastnej iniciatívy určuje
+  \begin{enumerate}[1.]
+    \item základnú službu a zaraďuje ju do zoznamu základných služieb,
+    \item digitálnu službu a zaraďuje ju do zoznamu digitálnych služieb,
+    \item poskytovateľa digitálnej služby a zaraďuje ho do registra poskytovateľov digitálnych služieb,
+    \item prevádzkovateľa základnej služby a zaraďuje ho do registra prevádzkovateľov základných služieb  
+  \end{enumerate}
+\end{enumerate}
+\end{quotation}
+Pochybnosti, či je organizácia prevádzkovateľom základnej služby, vyriešilo \acrshort{NBU} vlastnou iniciatívou, keď zaradilo
+veľkú časť miest a obcí na zoznam prevádzkovateľov základných služieb.
+
+\subsection{Povinnosti prevádzkovateľa základnej služby}
+Povinnosti prevádzkovateľa základnej služby sú špecifikované \acrshort{ZoKB} v \S 19. Prevádzkovateľ základnej služby je
+povinný prijať a dodržiavať 12 mesiacov odo dňa oznámenia o zaradení do registra prevádzkovateľov základných služieb, všeobecné
+bezpečnostné opatrenia (\acrshort{ZoKB} a jeho vykonávacími predpismi) a sektorové bezpečnostné opatrenia (\acrshort{ZoITVS}
+a jeho vykonávacími predpismi). Úroveň bezpečnostných opatrení musí zohľadňovať klasifikáciu a kategorizáciu systémov\footnote{Úroveň
+vyplýva zo závažností rizík vyplývajúcich z hrozieb voči systémom a aktívam organizácie.}. Prijatie bezpečnostných opatrení
+závisí od výsledkov analýzy rizík\footnote{\acrshort{ZoKB} implicitne predpokladá o už vykonanej analýze rizík.}.
+
+\acrshort{ZoKB} rámcovo stanovuje všeobecné bezpečnosné opatrenia, ktoré sú závezné pre všetky informačné systémy a siete.
+Tieto bezpečnostné opatrenia majú pokrývať všetky oblasti \acrshort{KIB}. \acrshort{ZoKB} explicitne vymenúva tieto oblasti
+a minimálne bezpečnostné opatrenia v \S 20:
+\begin{quotation}
+\begin{enumerate}[(1)] \setcounter{enumi}{2}
+  \item Bezpečnostné opatrenia sa prijímajú a realizujú najmä pre oblasť
+  \begin{enumerate}[a)]
+  \item organizácie kybernetickej bezpečnosti a informačnej bezpečnosti,
+    \item riadenia rizík kybernetickej bezpečnosti a informačnej bezpečnosti,
+    \item personálnej bezpečnosti,
+    \item riadenia prístupov,
+    \item riadenia kybernetickej bezpečnosti a informačnej bezpečnosti vo vzťahoch s tretími stranami,
+    \item bezpečnosti pri prevádzke informačných systémov a sietí,
+    \item hodnotenia zraniteľností a bezpečnostných aktualizácií,
+    \item ochrany proti škodlivému kódu,
+    \item sieťovej a komunikačnej bezpečnosti,
+    \item akvizície, vývoja a údržby informačných sietí a informačných systémov,
+    \item zaznamenávania udalostí a monitorovania,
+    \item fyzickej bezpečnosti a bezpečnosti prostredia,
+    \item riešenia kybernetických bezpečnostných incidentov,
+    \item kryptografických opatrení,
+    \item kontinuity prevádzky,
+    \item auditu, riadenia súladu a kontrolných činností.
+  \end{enumerate}
+
+  \item Bezpečnostné opatrenia musia zahŕňať najmenej
+  \begin{enumerate}[a)]
+    \item určenie manažéra kybernetickej bezpečnosti, ktorý je pri návrhu, prijímaní a presadzovaní bezpečnostných opatrení
+    nezávislý od štruktúry riadenia prevádzky a vývoja služieb informačných technológií a ktorý spĺňa znalostné štandardy
+    pre výkon roly manažéra kybernetickej bezpečnosti,
+    \item detekciu kybernetických bezpečnostných incidentov,
+    \item evidenciu kybernetických bezpečnostných incidentov,
+    \item postupy riešenia a riešenie kybernetických bezpečnostných incidentov,
+    \item určenie kontaktnej osoby pre prijímanie a evidenciu hlásení,
+    \item pripojenie do komunikačného systému pre hlásenie a riešenie kybernetických bezpečnostných incidentov a centrálneho
+    systému včasného varovania.
+  \end{enumerate}
+\end{enumerate}
+\end{quotation}
+Podrobná špecifikácia bezpečnostných opatrení, kategórií a ďalších povinností prevádzkovateľa základnej služby je uvedená
+vo Vyhláška Národného bezpečnostného úradu č. 362/2018 Z.z.
+
+Riešenie bezpečnostných incidentov ukladá \acrshort{ZoKB} v \S 24. Prevádzkovateľ základnej služby je povinný nahlasovať
+závažné bezpečnostné incidenty. Ďalšie povinnosti sú stanovené v \S 27 je popísane, kde \acrshort{NBU} vydáva výstrahy a
+varovania pred hrozbami a ukladá prevádzkovateľom základnej služby riešiť incident alebo vykonať reaktívne (preemptívne)
+opatrenia. Zo \acrshort{ZoITVS} vyplýva, že prevádzkovateľ by mal mať definovaný postup riešenia bezpečnostných incidentov,
+vrátane nahlasovania, vyhodnocovania a prijímania adekvátnych bezpečnostných opatrení.
+
+\acrshort{ZoKB} síce v \S 24 stanovuje povinnosť prevádzkovateľovi základnej služby do dvoch rokoch po zaradení do zoznamu
+sa podrobiť auditu. Avšak pre kategóriu I. Vyhláška Národného bezpečnostného úradu č. 362/2018 Z.z (doplnená a novelizovaná
+Vyhláškou Národného bezpečnostného úradu č. 264/2023 Z.z.) túto povinnosť neustanovuje\footnote{Je iba odporúčaním.}.
+
+\acrshort{ZoKB} ukladá v \S 19 ukladá zmluvné povinnosti prevádzkovateľa základnej služby voči tretím stranám: 
+\begin{quotation}
+\begin{enumerate}[(1)] \setcounter{enumi}{1}
+  \item Prevádzkovateľ základnej služby je povinný pri výkone činnosti, ktorá priamo súvisí s dostupnosťou, dôvernosťou
+  a integritou prevádzky sietí a informačných systémov prevádzkovateľa základnej služby prostredníctvom tretej strany,
+  uzatvoriť zmluvu o zabezpečení plnenia bezpečnostných opatrení a notifikačných povinností podľa tohto zákona počas celej
+  doby výkonu tejto činnosti; pri uzatvorení zmluvy sa vykonáva analýza rizík.
+  \end{enumerate}
+\end{quotation}
+Podľa nasledujúceho odseku (3) nie je potreba uzavrieť takúto zmluvu, ak je tretia strana prevádzkovateľom základnej alebo
+digitálnej služby, alebo ak je riziko pri vykonávaní činnosti voči tretej strane nízke. Ak nie je možné uzavrieť zmluvu
+podľa odseku (2), tak je prevádzkovateľ základnej služby povinný informovať tretiu stranu v nevyhnutnom rozsahu o bezpečnostnom
+incidente.
+
+Nakoniec, podľa \acrshort{ZoKB} môže ústredný orgán definovať špecifické bezpečnostné opatrenia a vyžadovať ich zavedenie
+v sektore/podsektore, za ktorý zodpovedá. Za sektor verejnej správy a podsektor informačných systémov verejnej správy zodpovedá
+\acrfull{MIRRI}\footnote{V samotnej prílohe č. 1 \acrshort{ZoKB} je uvedený Úradu podpredsedu vlády pre investície a informatizáciu, \acrshort{MIRRI}
+je jeho nástupníckym orgánom.}.
