@@ -1,7 +1,8 @@
 \chapter{Zavádzanie ISMS} \label{ISMS}
 Čo to znamená zaviesť ISMS a udržiavať ho?
 
-\section*{Prevzatie celkovej zodpovednosti vedením organizácie za KIB}
+%TODO spomenúť, že za vedenie budeme považovať aj štatutára/konateĺa/námestníka
+\section{Prevzatie celkovej zodpovednosti vedením organizácie za KIB}
 
 
 % AOR -> Acceptance of Overall Responsibility
@@ -48,20 +49,52 @@ pri riadení bezpečnostného procesu. Dôležité je vyzdvihnúť kritické pro
 prípade, že by došlo k bezpečnostnému incidentu\footnote{Pohroziť alebo vystrašiť môže byť vhodnou motiváciou pre vedenie, aby poskytlo
 dostatočné zdroje.}.
 
+% TODO presunúť na začiatokkk, tam sa to môže hodiť väčšmi
 \subsection*{Komentár ku všetkým}
 Na koniec poznamenáme, že predpokladáme, že v organizácii už došlo k rozhodnutiu zaviesť ISMS a vedenie už poverilo zaradilo
 nejakého zamestnanca do role manažéra KIB.
 
-\section*{Určenie cieľov a stratégie KIB}
+% SOS -> Security Objectives and Strategy
+\section{Určenie všeobecných cieľov KIB a stratégie KIB}
 \begin{enumerate}
-  \item Vedenie organizácie MUSÍ spustiť a ustanoviť bezpečnostný proces.
-  \item Vedenie organizácie MUSÍ definovať a dokumentovať vhodné ciele a stratégiu KIB.
-  \item Koncepčné materiály KIB MUSIA byť vypracované.
-  \item Vedenie organizácie MUSÍ prevziať zodpovednosť a podporovať ciele a stratégiu KIB.
-  \item Vedenie organizácie MUSÍ v pravidelných intervaloch revidovať ciele a stratégiu KIB.
+  \item \label{SOS:1} Vedenie organizácie MUSÍ spustiť bezpečnostný proces.
+  \item \label{SOS:2} Vedenie organizácie MUSÍ zadefinovať a zdokumentovať všeobecné ciele KIB a stanoviť stratégiu KIB.
+  \item \label{SOS:3} Vedenie organizácie MUSÍ prevziať zodpovednosť a podporovať ciele KIB a stratégiu KIB.
+  \item \label{SOS:4} Vedenie organizácie MUSÍ v pravidelných intervaloch revidovať ciele KIB a stratégiu KIB.
 \end{enumerate}
 
-\section*{Načrtnutie politiky KIB}
+%TODO trochu tu vlkladám slovo všeobecný
+
+\subsection*{Komentár k \ref{SOS:1} a \ref{SOS:2}}
+Vstupom pre bezpečnostný proces sú všeobecné ciele KIB a stratégia KIB. Všeobecné ciele sú špecifické pre každú organizáciu
+a odvíjajú sa od jej poslania, príkladom sú:
+\begin{itemize}
+  \item vysoká spoľahlivosť spracovania informácie vzhľadom k dôvernosti, integrite a dostupnosti,
+  \item dobre meno organizácie,
+  \item ochrana zamestnancov, osobných údajov a vysoko cenných informácií,
+  \item plnenie si zákonných povinností.
+\end{itemize}
+
+Na určenie stratégie KIB je potrebná vysokoúrovňová analýza rizík, pomocou ktorej bude možné identifikovať hlavné aktíva,
+ktorým hrozbám čelia a pod akým rizikom sú. Výsledok vysokoúrovňovej analýzy rizík sa premietne do bezpečnostnej stratégie\footnote{
+V skutočnosti je to začarovaný kruh, na jednej strane na určenie stratégie KIB potrebujeme vedieť, ktoré aktíva
+potrebujeme chrániť, na druhej strane analýza rizík vychádza zo stratégie, kde sa popisuje, čo treba chrániť. Riešením je
+useknúť to a začať vysokoúrovňovou analýzou rizík, ktorá ale nezachádza do detailov, iba poskytuje dostatočný nadhľad.},
+% TODO toto neznie dobre
+kde sa popíše, čo chránime, pred čím, spôsob ochrany, ako to súvisí s cieľmi KIB a ako ich naplniť.
+
+\subsection*{Komentár k \ref{SOS:3}}
+Stratégia KIB je schvaľovaná vedením KIB a je súčasťou politiky KIB, v ktorej (mimo iné) je zdôraznený záväzok vedenia k
+určeným cieľom KIB a stratégie KIB.
+
+\subsection*{Komentár k \ref{SOS:4}}
+Prostredie, strategicky kontext, ciele organizácie a potenciálne hrozby sa časom menia, preto je potrebné v pravidelných
+intervaloch\footnote{Pol roka a menej môže byť príliš často, každý rok je primerane dlhá doba, no dlhší časový interval
+sa môže prejaviť ako rizikový. Samozrejme, v prípade výnimočných situácií bude potrebné konať hneď a nečakať na ďalšiu
+plánovanú revíziu.} vhodne prispôsobovať ciele KIB a stratégiu KIB meniacim sa podmienkam.
+
+
+\section{Načrtnutie politiky KIB}
 \begin{enumerate}
   \item Vedenie organizácie MUSÍ prijať zastrešujúcu politiku KIB.
   \item Politika KIB MUSÍ popísať hodnotu KIB, ciele KIB, dôležité prvky stratégie KIB a organizačnú štruktúru KIB.
@@ -71,7 +104,7 @@ nejakého zamestnanca do role manažéra KIB.
   \item Politiky KIB by MALA byť revidovaná v pravidelných intervaloch.
 \end{enumerate}
 
-\section*{Vymenovanie manažéra KIB}
+\section{Vymenovanie manažéra KIB}
 \begin{enumerate}
   \item Vedenie organizácie MUSÍ vymenovať manažéra KIB.
   \item Manažér KIB MUSÍ podporovať KIB a pomáhať riadiť bezpečnostný proces.
@@ -80,7 +113,7 @@ nejakého zamestnanca do role manažéra KIB.
   \item Manažér KIB MUSÍ byť prítomnú v rannom štádiu zavádzaní nových aplikácií a IT systémov.
 \end{enumerate}
 
-\section*{Vytvorenie vhodnej organizačnej štruktúry KIB}
+\section{Vytvorenie vhodnej organizačnej štruktúry KIB}
 \begin{enumerate}
   \item Organizácia MUSÍ mať vhodnú vysokoúrovňovú organizačnú štruktúru KIB.
   \item MUSIA byť vytvorené nové role KIB pre špecifické úlohy KIB.
@@ -92,14 +125,14 @@ nejakého zamestnanca do role manažéra KIB.
   \item Organizačná štruktúra KIB musí byť revidovaná v pravidelných intervaloch.
 \end{enumerate}
 
-\section*{Definícia bezpečnostných opatrení}
+\section{Definícia bezpečnostných opatrení}
 \begin{enumerate}
   \item Pre všetky aspekty spracovania informácie MUSIA byť definované detailné a primerané bezpečnostné opatrenia.
   \item Všetky bezpečnostné opatrenia by MALI byť systematický dokumentované v bezpečnostných konceptoch.
   \item Bezpečnostné opatrenia by MALI byť pravidelne revidované.
 \end{enumerate}
 
-\section*{Zapojenie zamestnancov do bezpečnostného procesu}
+\section{Zapojenie zamestnancov do bezpečnostného procesu}
 \begin{enumerate}
   \item Všetci zamestnanci MUSIA byť integrovaní do bezpečnostného procesu.
   \item Zamestnanci MUSIA byť informovaní o nebezpečenstvách, ktoré sú pre nich relevantné.
@@ -110,7 +143,7 @@ nejakého zamestnanca do role manažéra KIB.
   \item Zamestnanci MUSIA byť oboznámení s následkami porušenia bezpečnostných pravidiel.
 \end{enumerate}
 
-\section*{Integrovanie KIB do procedúr a procesov celej organizácie}
+\section{Integrovanie KIB do procedúr a procesov celej organizácie}
 \begin{enumerate}
   \item KIB MUSÍ byť integrovaná do všetkých biznisových procesov a špecializovaných úloh.
   \item Všetky bezpečnostné aspekty MUSIA byť zohľadnené pri prebiehajúcich činnostiach a aj pri nových činnostiach organizácie.
