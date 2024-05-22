@@ -1,9 +1,65 @@
 \chapter{Zavádzanie ISMS} \label{ISMS}
-Čo to znamená zaviesť ISMS a udržiavať ho?
 
-%TODO spomenúť, že za vedenie budeme považovať aj štatutára/konateĺa/námestníka
+Systém riadenia(angl. \textit{management system}) je súbor politík, procedúr, zdrojov a schopností, ktoré sa zameriavajú
+na efektívne vykonávanie riadiacích úloh v danej doméne za účelom splniť ciele organizácie\footnote{FitSM-0 Overview and
+vocabulary, https://www.fitsm.eu/download/748/?tmstv=1716036382}. System riadenia zaoberajúci sa informačnou bezpečnosťou
+nazývame systém riadenia informačnej bezpečnosti(angl. \textit{information security management system}, ISMS).
+
+ISMS špecifikuje nástroje a metódy, pomocou ktorých manažment dokáže jasne riadiť úlohy a aktivity slúžiace na dosiahnutie
+informačnej bezpečnosti\cite{BSI1}. Cieľom ISMS je zaručiť dôvernosť, integritu a dostupnosť informácie, procesov a IT
+systémov. ISMS pozostáva z\footnote{Štruktúra ISMS a jeho jednotlivých častí je detailne popísaná v štandardoch 27001,
+27002 a BSI 200-1.}:
+
+\begin{itemize}
+  \item princípov riadenia informačnej bezpečnosti,
+  \item zdrojov slúžiacich na zriadenie a udržiavanie informačnej bezpečnosti
+  \item ľudí, ktorí priamo pracujú s informáciami, systémami a technológiami slúžiacimi na spracovanie alebo plnia špeciálne
+    úlohy v rámci informačnej bezpečnosti a 
+  \item bezpečnostného procesu.
+\end{itemize}
+
+Zavedenie, udržiavanie a rozvoj informačnej bezpečnosti v organizácii nazývame bezpečnostný proces. Je to kontinuálny proces,
+ktorý prebieha počas celého životného cyklu organizácie a vďaka ktorému možno priebežne monitorovať výkon a efektivitu stratégií,
+konceptov a opatrení. Súčasťou bezpečnostného proces sú bezpečnostná stratégia, bezpečnostná politika, bezpečnostné ciele,
+bezpečnostný koncept a bezpečnostná organizácia.
+
+Bezpečnostná stratégia slúži na orientáciu pri plánovaní ďalších krokov pre dosiahnutie stanovených bezpečnostných cieľov,
+ktoré sú určené vedením organizácie a sú špecifické pre každú organizáciu. Bezpečnostné ciele sú odvodené od cieľov/poslaní
+organizácie, povinností, podmienok, spôsobu využivania \acrshort{dIKT} a spôsoboch spracovávania informácia. Bezpečnostná
+stratégia je samostatný dokument alebo súčasť (hlavička) bezpečnostnej politiky.
+
+Bezpečnostná politika vo všeobecnosti popisuje, ako má byť zavedená informačná bezpečnosť v organizácií, aký je jej účel
+a ktoré zdroje sú vynaložené na informačnú bezpečnosť. Obsahuje záväzok vedenia k zodpovednosti za informačnú bezpečnosť,
+vysvetľuje bezpečnostné ciele, čo chránia, aká je úroveň cielenej bezpečnosti a ako bezpečnostné ciele súvisia s poslaním
+organizácie. Ďalej popisuje vytvorenú organizáciu informačnej bezpečnosti, vytvorené roly a kto je zodpovedný za informačnú
+bezpečnosť.
+
+
+Zavádzanie ISMS je dlhý a komplexný proces, podnet na jeho zavedenie musí byť iniciovaný vedením organizácie. V ďalšej časti
+popíšeme kroky potrebné na zavedenie ISMS, postupovať budemee podľa Kompendia\footnote{Slovník cudzích slov: kompendium – vedecká
+príručka so základnými poznatkami daného odboru.}IT-Grundschutz\cite{GSK} Spolkovéhu úradu pre informačnú bezpečnosť(BSI).
+Pred začatím ďalšej sekcie si vyjasníme ešte dve veci.
+
+Prvá vec, modálne slovesá používané na označenie požiadavkov, majú byť interpretovane nasledovne:
+\begin{itemize}
+  \item \textbf{MUSÍ}, vyjadruje povinnú požiadavku a
+  \item \textbf{MAL BY}, vyjadruje odporúčanie. 
+\end{itemize}
+
+Druhá vec, doposiaľ sme v tejto kapitole používali pojem informačná bezpečnosť, v ďalšej časti tejto kapitoly budeme používať
+už známy pojem KIB. Pre účely tejto kapitoly budeme pojmy informačná bezpečnosť a KIB vnímať ako jeden a ten istý.
+
+Formát ďalšej časti, v ktorej popíšeme postupnosť krokov, je nasledovný:
+\begin{itemize}
+  \item na začiatku sekcie uvedieme opatrenie,
+  \item pod opatrením budú vymenované úlohu na jeho splnenie a 
+  \item pod zoznamom úloh budú komentáre pre objasnenie jednotlivých úloh.
+\end{itemize}
+
+
+
+
 \section{Prevzatie celkovej zodpovednosti vedením organizácie za KIB}
-
 
 % AOR -> Acceptance of Overall Responsibility
 \begin{enumerate}
@@ -16,34 +72,34 @@
 \end{enumerate}
 
 \subsection*{Komentár k \ref{AOR:1}}
-Vedenie je zodpovedné za plnenie svojho poslania, dosiahnutie svojich cieľov a je zodpovedné za spoľahlivý beh svojich
-systémov. Vyhlásenie vedenia sa nachádza na začiatku politiky KIB, jeho účelom je vyslať jasný signál všetkým zainteresovaným
-stranám\footnote{Niekto tento pojem pozná z angl. \textit{shareholder}.}, že organizácia bude uplatňovať svoju autoritu
-a zdroje na zabezpečenie potrebnej úrovne KIB.
+Vedenie je zodpovedné za plnenie poslania organizácie, dosiahnutie svojich cieľov a je zodpovedné za spoľahlivý beh svojich
+systémov. Vyhlásenie vedenia sa nachádza v politike KIB, jeho účelom je vyslať jasný signál všetkým zainteresovaným
+stranám\footnote{Niekto tento pojem pozná z angl. \textit{shareholder}.}, že vedenie organizácie bude uplatňovať svoju
+autoritu a zdroje na zabezpečenie potrebnej úrovne KIB.
 
-Poznamenáme predpoklad, že v organizácii už došlo k rozhodnutiu zaviesť ISMS a tento krok je iba formalita.
+Predpoklad, že v organizácii už došlo k rozhodnutiu zaviesť ISMS a táto úloha je iba formalitou.
 
 \subsection*{Komentár k \ref{AOR:2}}
 Jedine vedenie má potrebnú autoritu na spustenie bezpečnostného procesu. Vedenie má mnoho ďalších povinností, nemôže sa
 plne venovať vykonávaniu a ani nemá dostatočné zručnosti na riešenie KIB. Preto musí delegovať zodpovednosť za KIB
 kvalifikovaným zamestnancom, zadávať im úlohy a kontrolovať, ako splnili svoje úlohy. Vedenie bude musieť vytvoriť
-vhodnú organizačnú štruktúru, zadefinovať role KIB do ktorých zaradí zamestnancov.
+vhodnú organizačnú štruktúru, definovať roly KIB do ktorých zaradí zamestnancov.
 
 \subsection*{Komentár k \ref{AOR:3}}
 Zavedené opatrenia KIB musí dodržiavať aj vedenie, čim dokáže efektívne motivovať zamestnancov, aby ich rovnako dodržiavali.
-Ak bude vedenie obchádzať zavedené opatrenia, nemôže očakávať, že aj zamestnanci budú dodržiavať opatrenia\footnote{Ľudovo
+Ak bude vedenie obchádzať zavedené opatrenia, nemôže očakávať, že zamestnanci sami budú dodržiavať opatrenia\footnote{Ľudovo
 povedané, aby nepili víno a nekázali vodu.}.
 
 \subsection*{Komentár k \ref{AOR:4}}
-Na zavedenie systematického riešenie KIB v organizácií bude potrebných mnoho zdrojov,
+Na zavedenie systematického riešenia KIB v organizácií bude potrebných mnoho zdrojov,
 či už ľudských alebo finančných, zamestnancom sa rozšíria pracovné povinnosti, možno bude potrebné prijať nových ľudí
 alebo dokúpiť zariadenia. Zodpovednosť za KIB je zvyčajne priradená roli manažéra KIB\footnote{V medzinárodných štandardoch
 a metodikách je rola manažéra KIB pomenovaná angl. \textit{Information security officer(ISO)} alebo \textit{Chief information
 security officer(CISO)}.}, jeho povinnosti rozoberieme neskôr. 
 
 Zamestnanci zaradení do rolí KIB potrebujú mať dostatočnú kvalifikáciu a zručnosti. Ak by bol, povedzme z nutnosti, do roly
-zaradený niekto neznalý, nemôže sa od neho očakávať, že ošetrí a vyrieši všetky bezpečnostné problémy, bude potrebovať čas
-na to, aby sa zaučil.
+zaradený niekto neznalý, nemôže sa od neho očakávať, že ošetrí a vyrieši všetky bezpečnostné problémy, naopak bude potrebovať
+čas na to, aby sa zaučil.
 
 \subsection*{Komentár k \ref{AOR:5}}
 Povinnosťou manažéra KIB je vyhotovovať ročné správy o KIB, ktoré bude predkladať vedeniu, aby malo dostatok informácií
@@ -75,14 +131,14 @@ sú všeobecné a odvíjajú sa od jej poslania, príkladom sú:
 Na určenie stratégie KIB je potrebná vysokoúrovňová analýza rizík, pomocou ktorej bude možné identifikovať hlavné aktíva,
 ktorým hrozbám čelia a pod akým rizikom sú. Výsledok vysokoúrovňovej analýzy rizík sa premietne do bezpečnostnej stratégie\footnote{
 V skutočnosti je to začarovaný kruh, na jednej strane na určenie stratégie KIB potrebujeme vedieť, ktoré aktíva
-potrebujeme chrániť, na druhej strane analýza rizík vychádza zo stratégie, kde sa popisuje, čo treba chrániť. Riešením je
-useknúť to a začať vysokoúrovňovou analýzou rizík, ktorá ale nezachádza do detailov, iba poskytuje dostatočný nadhľad.},
+potrebujeme chrániť, na druhej strane analýza rizík vychádza zo stratégie, kde sa popisuje, čo treba chrániť. Jedným z 
+riešením je useknúť to a začať vysokoúrovňovou analýzou rizík, ktorá ale nezachádza do detailov, iba poskytuje dostatočný
+nadhľad.}, kde sa popíše, čo chránime, pred čím, spôsob ochrany, ako to súvisí s cieľmi KIB a ako naplniť ciele.
 % TODO toto neznie dobre
-kde sa popíše, čo chránime, pred čím, spôsob ochrany, ako to súvisí s cieľmi KIB a ako ich naplniť.
 
 \subsection*{Komentár k \ref{SOS:3}}
-Stratégia KIB je schvaľovaná vedením KIB a je súčasťou politiky KIB, v ktorej (mimo iné) je zdôraznený záväzok vedenia k
-určeným cieľom KIB a stratégie KIB.
+Stratégia KIB je schvaľovaná vedením a zvykne byť súčasťou politiky KIB, v ktorej (mimo iné) je zdôraznený záväzok vedenia
+k určeným cieľom KIB a stratégii KIB.
 
 \subsection*{Komentár k \ref{SOS:4}}
 Prostredie, strategicky kontext, ciele organizácie a potenciálne hrozby sa časom menia, preto je potrebné v pravidelných
@@ -98,7 +154,7 @@ plánovanú revíziu.} vhodne prispôsobovať ciele KIB a stratégiu KIB meniaci
   \item \label{POL:2} Politika KIB MUSÍ popísať význam KIB.
   \item \label{POL:3} Rozsah pôsobnosti politiky KIB MUSÍ byť jasne určený.
   \item \label{POL:4} Politika KIB MUSÍ byť sprístupnená všetkým zamestnancom a externým spolupracovníkom.
-  \item \label{POL:5} Politika KIB by MALA byť revidovaná v pravidelných intervaloch.
+  \item \label{POL:5} Politika KIB BY MALA byť revidovaná v pravidelných intervaloch.
 \end{enumerate}
 
 \subsection*{Komentár k \ref{POL:1}}
@@ -135,15 +191,14 @@ následne vhodne oboznámiť zamestnancov a externých spolupracovníkov o tých
 Manažér KIB pomáha s koordináciou a usmerňovaním bezpečnostného procesu, ideálne by mal poznať organizáciu, jej procesy(a
 ako spolu súvisia), štruktúru organizácie, externých spolupracovníkov a dodávateľov. Manažér KIB by mal byť schopný samostatnej
 činnosti, vedieť obhájiť a presadiť bezpečnostné opatrenia\footnote{Mnohé opatrenia zasahujú do pohodlia používateľov, čo
-môže vyvolať odpor a ústupčivý manažér KIB v dôsledku nemusí zaviesť potrebné bezpečnostné opatrenia.}.
+môže vyvolať odpor a ústupčivý manažér KIB v dôsledku nemusí presadiť potrebné bezpečnostné opatrenia.}.
 
 Prirodzene, manažér KIB musí mať dostatočné vedomosti a zručnosti, aby vedel imlpementovať efektívne a účinné opatrenia.
 Ešte podotkneme, že vykonávací predpis 492/2022 Z. z. \acrshort{ZoKB} ustanovuje znalostné štandardy aj pre rolu manažéra
 KIB\footnote{Sú to rôznorodé a rozsiahle požiadavky na vedomosti, zručnosti, vzdelanie, prax a špecifické kompetencie,
 ktorými má manažér KIB disponovať.}, v tejto práci sa jej ale nebudeme venovať.
 
-Podobne, ako pri prevzatí celkovej zodpovednosti za KIB, aj tu predpokladáme, že manažér KIB bol už vedením organizácie
-menovaný.
+Podobne, ako pri prevzatí celkovej zodpovednosti za KIB, aj tu predpokladáme, že už bol manažér KIB menovaný vedením organizácie.
 
 \subsection*{Komentár k \ref{MKIB:3}}
 Vedenie organizácie musí manažérovi KIB vytvoriť vhodné podmienky a poskytnúť mu dostatočne kompetencie a zdroje na riadenie
@@ -169,7 +224,7 @@ bude treba už existujúce riešenia opätovne prerábať.
   \item \label{EOS:4} Roly, úlohy, zodpovednosti a kompetencie MUSIA byť transparentne priradené.
   \item \label{EOS:5} MUSÍ byť stanovené efektívne pravidlá zastupovania pre všetky dôležité časti organizácie.
   \item \label{EOS:6} Komunikačné kanály MUSIA byť naplánované, opísané, zavedené a zverejnené.
-  \item \label{EOS:7} Organizačná štruktúra KIB musí byť revidovaná v pravidelných intervaloch.
+  \item \label{EOS:7} Organizačná štruktúra KIB MUSÍ byť revidovaná v pravidelných intervaloch.
 \end{enumerate}
 
 \subsection*{Komentár k \ref{EOS:1} a \ref{EOS:2}}
@@ -191,7 +246,7 @@ Bezpečnostné roly môžu predstavovať:
 procesu a vymedzené prostriedky, aby svoje povinnosti mohli vykonávať v plnom rozsahu. Zaradenie do roly nie je statické
 a musí súvisieť s tým, čo vykonáva daný človek a v prípade preradenia na inú pracovnú pozíciu sa môže meniť.
 
-Organizácia si musí stanoviť pravidlá pre správu rôl: Kto rozhoduje o zadelení človeka do role? Kto priraďuje príslušné
+Organizácia si musí stanoviť pravidlá pre správu roly: Kto rozhoduje o zaradení zamestnanca do role? Kto priraďuje príslušné
 oprávnenia? Čo sa má udiať v prípade zmeny pracovnej pozície/náplne?
 
 \subsection*{Komentár k \ref{EOS:5}}
@@ -207,14 +262,14 @@ Pripomenieme, že \acrshort{ZoKB} v \S 24 a z \acrshort{ZoITVS} \S 23 ukladajú 
 
 \subsection*{Komentár k \ref{EOS:7}}
 Podobne, ako politiku a stratégiu KIB, tak aj organizáciu KIB je potrebné v pravidelných intervaloch aktualizovať a
-prispôsobovať zmenám v organizácii a okolia.
+prispôsobovať zmenám v organizácii a zmenám v okolí.
 
 % DSS -> Definition of Security Safeguards
 \section{Definícia bezpečnostných opatrení}
 \begin{enumerate}
   \item \label{DSS:1} Pre všetky aspekty spracovania informácie MUSIA byť definované detailné a primerané bezpečnostné opatrenia.
-  \item \label{DSS:2} Všetky bezpečnostné opatrenia by MALI byť systematický dokumentované v bezpečnostných konceptoch.
-  \item \label{DSS:3} Bezpečnostné opatrenia by MALI byť pravidelne revidované.
+  \item \label{DSS:2} Všetky bezpečnostné opatrenia BY MALI byť systematický dokumentované v bezpečnostných konceptoch.
+  \item \label{DSS:3} Bezpečnostné opatrenia BY MALI byť pravidelne revidované.
 \end{enumerate}
 
 \subsection*{Komentár k \ref{DSS:1}}
@@ -225,9 +280,9 @@ Bude potrebné vypracovať bezpečnostný projekt a vykonať analýzu rizík. Be
 (všeobecné opatrenia) alebo pre nejakú časť organizácie(špecifické opatrenia). 
 
 \subsection*{Komentár k \ref{DSS:2} a \ref{DSS:3}}
-Ľudia ľahko zabudnú, prečo boli niektoré opatrenia zavedené a prečo v danej forme. Zavedené opatrenia môžu byť časom redundantné,
-málo efektívne alebo nedostatočné, keďže sa môžu objaviť nové hrozby a zraniteľnosti, eventuálne bude potreba opatrenia
-upraviť alebo doplniť.
+Ľudia ľahko zabudnú, prečo boli niektoré opatrenia zavedené a prečo práve v takej forme. Zavedené opatrenia môžu byť časom
+redundantné, málo efektívne alebo nedostatočné, keďže sa môžu objaviť nové hrozby a zraniteľnosti. Eventuálne bude potreba
+opatrenia upraviť alebo doplniť.
 
 
 % IESP -> Ingegrating Employees to the Security Process
@@ -235,17 +290,56 @@ upraviť alebo doplniť.
 \begin{enumerate}
   \item \label{IESP:1} Všetci zamestnanci MUSIA byť integrovaní do bezpečnostného procesu.
   \item \label{IESP:2} Zamestnanci MUSIA byť informovaní o nebezpečenstvách, ktoré sú pre nich relevantné.
-  \item \label{IESP:3} Zamestnanci MUSIA vedieť, ako a môcť implementovať bezpečnostné opatrenia súvisiace s ich pracoviskom.
+  \item \label{IESP:3} Zamestnanci MUSIA vedieť o nebezpečenstvách a vedieť, ako implementovať bezpečnostné opatrenia súvisiace
+    s ich pracoviskom.
   \item \label{IESP:4} Zamestnancom MUSÍ byť umožnené aktívne prispievať k bezpečnosti.
-  \item \label{IESP:5} Zamestnancom by MALI byť prítomný v rannom štádiu plánovania bezpečnostných opatrení.
-  \item \label{IESP:6} Pri zavádzaní bezpečnostných politík a nástrojov zamestnanci MUSIA vhodne informovaný, ako s nimi majú zaobchádzať.
+  \item \label{IESP:5} Zamestnanci BY MALI byť prítomní v rannom štádiu plánovania bezpečnostných opatrení.
+  \item \label{IESP:6} Pri zavádzaní bezpečnostných politík a nástrojov zamestnanci MUSIA vhodne informovaní, ako s nimi
+    majú zaobchádzať.
   \item \label{IESP:7} Zamestnanci MUSIA byť oboznámení s následkami porušenia bezpečnostných pravidiel.
 \end{enumerate}
 
+\subsection*{Komentár k \ref{IESP:1}, \ref{IESP:2} a \ref{IESP:3}}
+Zamestnanci musia mať povedomie o KIB, relevantných hrozbách a povinnostiach, ktoré majú voči KIB. Zamestnanci musia vedieť
+o bezpečnostných opatreniach súvisiacich s vykonávaním ich práce, musia vedieť, kde nájsť základne dokumenty KIB, kde sa
+nachádzajú upozornenia/varovania pred nebezpečenstvami a kde sú zverejnené návody alebo iné vzdelávacie materiály KIB.
+
+Noví zamestnanci, ešte pred výkonom svojej práce a prístupom k systémom a informačným technológiám organizácie, musia byť
+zaškolení\footnote{Napríklad súčasťou povinného BOZP môže byť aj školenie o KIB.} v oblasti KIB, existujúcich
+zamestnancov treba preškoliť a informovať o relevantných bezpečnostných problémoch.
+
+\subsection*{Komentár k \ref{IESP:4} a \ref{IESP:5}}
+Zamestnanci majú povinnosť upozorniť na nedostatky KIB, hlásiť bezpečnostné incidenty, s ktorými sa stretnú a musia vedieť,
+komu hlásiť tieto problémy. Tiež by mali byť súčasťou prípravy bezpečnostných opatrení, ktoré sa ich týkajú, aby mohli byť
+prijaté bezpečnostné opatrenia, ktoré sú realistické a vyhovujú obom\footnote{Manažérovi KIB, ktorý vytvára a predkladá
+bezpečnostné opatrenia a zamestnancom, ktorý majú dodržiavať navrhované bezpečnostné opatrenia.} stranám.
+
+\subsection*{Komentár k \ref{IESP:6}}
+Podľa obsahu a rozsahu opatrení treba zvoliť vhodnú formu oboznámenia\footnote{Napríklad pripraviť školenie, spomenúť na
+rannom/obednajšom meetingu, zverejniť na webovej stránke organizácie, zaslať mail s návodom.}, vysvetliť, čo sa od zamestnancov
+očakáva, prečo a aké povinnosti pre nich vyplývajú.
+
+\subsection*{Komentár k \ref{IESP:7}}
+Zamestnanci musia vedieť, že svoje povinnosti musí plniť a v prípade ich neplnenia, aké sankcie im budú uložené.
+
+
+% IKIBO -> Integrating KIB into Organisation
 \section{Integrovanie KIB do procedúr a procesov celej organizácie}
 \begin{enumerate}
-  \item KIB MUSÍ byť integrovaná do všetkých biznisových procesov a špecializovaných úloh.
-  \item Všetky bezpečnostné aspekty MUSIA byť zohľadnené pri prebiehajúcich činnostiach a aj pri nových činnostiach organizácie.
-  \item Manažér KIB sa musí podieľať pri všetkých rozhodnutiach súvisiacich s bezpečnosťou.
-  \item KIB by mala byť koordinovaná s ďalšími oblasťami organizácie zaoberajúce sa riadením rizík a bezpečnosti.
+  \item \label{IKIB:1} KIB MUSÍ byť integrovaná do všetkých procesov organizácie.
+  \item \label{IKIB:2} Manažér KIB MUSÍ byť adekvátne zapojený pri všetkých rozhodnutiach súvisiacich s bezpečnosťou.
+  \item \label{IKIB:3} KIB BY mala byť koordinovaná s ďalšími oblasťami organizácie zaoberajúce sa riadením rizík a bezpečnosti.
 \end{enumerate}
+
+\subsection*{Komentár k \ref{IKIB:1}}
+Pre všetky činnosti vykonávané organizáciou treba určiť zodpovedných vlastníkov. Pomocou vlastníkov určí manažér KIB, ktoré
+informácie sa v systémoch spracovávajú, aké bezpečnostné opatrenia si vyžadujú, kto k nim má prístup, ktorým hrozbám čelia
+a akému riziku sú vystavené. Pri nových procesoch bude môcť manažér KIB zabudovať bezpečnostné opatrenia už pri návrhu.
+
+\subsection*{Komentár k \ref{IKIB:2}}
+Manažér KIB by mal posúdiť bezpečnostnú stránku navrhovaných riešení/opatrení a upozorniť na prípadné problémy.
+
+\subsection*{Komentár k \ref{IKIB:3}}
+Manažér KIB bude napríklad potrebovať pomôcť právneho oddelenia pri vytváraní/uzatváraní zmlúv a dodatkov, pomoc personálneho
+oddelenia pri výbere zamestnancov a zmenách pracovnej náplne alebo pomoc správcu budovy pri závadzaní opatrení chrániacimi pred
+prírodnými alebo fyzickými hrozbami.
