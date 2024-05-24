@@ -1,0 +1,96 @@
+\chapter{Po bitke sú všetci\ldots}
+
+Pôvodná predstava a zámer bakalárskej práce v počiatočnom štádiu výskumu a analýzy bol jednoduchý. Náš plán predstavoval
+niekoľko krokov, ktoré tvorili základ problematiky:
+\begin{enumerate}
+  \item Identifikovať požiadavky na bezpečnosť ISVS vyplývajúce z legislatívy.
+  \item Konkretizovať legislatívne požiadavky na základe noriem. 
+  \item Navrhnúť postup, ktorým by sme efektívne naplnili tieto legislatívne požiadavky.
+  \item Vytvoriť systém na podporu zavedenia ISMS\footnote{Zaviesť systém riadenia informačnej bezpečnosti od nás explicitne
+    vyžadovala legislatíva.} v organizácii pre osobu poverenú touto úlohou -- manažéra KIB.
+  \item Usporiadať a logicky zoskupiť informácie získane pri zavádzaní ISMS.
+  \item Získané informácie využiť pri správe rizík.
+\end{enumerate}
+
+Počiatočný predpoklad bol taký, že na \enquote{malé} ISVS budú kladené iba základne (malé) bezpečnostné požiadavky a potrebný
+systém na podporu by bol pomerne malý a jednoduchý. Ukázalo sa však, že opak bol pravdou a problematika sa v skutočnosti
+ešte väčšmi rozšírila a vyšlo najavo, čo všetko sa v skutočnosti skrýva v požiadavkách zákonov. Nami navrhnutý systém je
+síce nekompletný, nepokrýva všetky požiadavky stanovené zákonmi, no aj napriek tomu je veľmi rozsiahly.
+
+Na svetlú stranu, bakalárska práca ukázala, že takýto systém na podporu vývoja bezpečnostného projektu sa dá vytvoriť:
+\begin{enumerate}
+  \item Podrobne sme analyzovali legislatívne požiadavky zákonov ZoKB a ZoITVS a vykonávacích predpisov 362/2018 a 179/2020
+    v kapitole \ref{chapter:legal-analysis}.
+  \item Zosúladili sme legislatívne požiadavky uvedených právnych noriem.
+  \item Vyjadrili sme všeobecné požiadavky právnych noriem pomocou technických noriem ISO/IEC 27001 a ISO/IEC 27002\footnote{
+      Z týchto dvoch technických noriem vychádzajú ZoKB a ZoITVS.}, s ktorými sú kompatibilné BSI 200-1,
+    BSI 200-2, BSI 200-3\ a kompendium IT-Grundschutz.
+  \item Upravili, resp. zjednodušili sme postup pri zavádzaní ISMS uvedený v metodikách BSI, aby bol zrozumiteľný aj pre
+    neznalého a začínajúceho manažér KIB malého ISVS a najnižšej bezpečnostnej kategórie\footnote{Kategórie I z hľadiska
+    kategorizácie sieti a informačných systémov (ZoKB) a správcu ISVS kategórie I (ZoITVS).}.
+    KIB
+  \item Vytvorili sme jednoduchý systém, ktorý prevedie manažéra KIB postupom zavádzania ISMS, poskytne mu základné informácie
+    o KIB, legislatívnych požiadavkách a navrhovaných riešeniach.
+\end{enumerate}
+Nami vytvorený systém je dôkazom toho, že sa to dá, je to hľadaný \enquote{proof of concept} toho, že taký pomocný systém 
+je možné vypracovať.
+
+Nič však nie je dokonale a aj nášmu systému chýba mnoho ďalších vecí, na ktoré sme nemali dostatok času a boli mimo rámec 
+bakalárskej práce. Preto by sme sa teraz radi venovali veciam, ktoré sme v písomnej práci alebo systéme nespomenuli, no
+mali by byť súčasťou v nasledujúcich fáz\footnote{Poznamenáme, že zoznam určite nie je kompletný}, rozoberieme aj veci,
+ktoré by sme mohli lepšie rozvrhnúť, lebo teraz už aj my sme generáli.
+
+\section{Čo nebolo a mohlo byť, čo bolo a mohlo byť lepšie}
+
+\subsection*{Ochrana osobných údajov}
+Jednu z najväčších vecí, ktoré sme nespomenuli a sme sa jej vôbec nevenovali, je ochrana osobných údajov. Určite sme už všetci
+počuli o nariadení 2016/679 Európskej únie, tiež známe ako GDPR\footnote{Po angl. \textit{General data protection regulation},
+všeobecné nariadenie o ochrane údajov.} a vysokých sankciách udelených v prípade jeho porušenia. V organizácii by mala byť
+prítomná špeciálna osoba, ktorá sa venuje ochrane osobných údajov. Určite by bolo potrebné vysvetliť túto problematiku v
+systéme, no toto samo o sebe je rozsiahla oblasť hodná i svojej vlastnej záverečnej práce.
+
+\subsection*{Príbuzná legislatíva}
+V éteri sa tiež nachádza 241/2001 Z. z., zákon o ochrane utajovaných skutočností, náš systém by ho síce neriešil, ale jedna
+časť by sa mu mohla venovať, aby uviedla manažéra do kontextu. V podobnom duchy by sme mohli informovať manažéra KIB o
+zvyšných vykonávacích predpisoch ZoKB a ZoITVS, napríklad 493/2022 Z. z., o audite KIB alebo 78/2020 Z. z. o štandardoch
+pre ITVS.
+
+\subsection*{Bezpečnostné politiky druhej úrovne}
+Politika KIB je všeobecný dokument, ktorý je síce rozsiahly, no nič špecifické nehovorí. Politiky druhej úrovne podrobnejšie
+rozoberajú oblasti KIB obsiahnuté v politike KIB, ktoré sú rámcovo stanovené ZoKB a ZoITVS. Podrobne rozpracovať oblasti
+je však veľmi rozsiahle.
+
+\subsection*{Čo po spísaní politiky}
+Spísať politiku KIB a zaviesť ISMS v organizácii je iba prvotný krok bezpečnostného procesu, v skutočnosti bude potrebné
+udržiavať zavedený ISMS na dostatočnej úrovni, čím sa začne sa životný cyklus ISMS. Organizáciu ešte čaká vypracovanie bezpečnostných
+projektov, inventarizácia a riadenie aktív, analýza a riadenie rizík.
+
+\subsection*{Kategórie II a III}
+Doposiaľ sme sa venovali iba najmenšej a z princípu najľahšej kategórií I. Síce podrobnú analýzu sme vykonali pre kategóriu
+I, no nahliadli sme aj do vyšších kategórií, kde sú požiadavky na prevádzkovateľov základných služieb a správcov ISVS
+rádovo väčšie. V krátkosti to znamená viac povinností, komplexnejšiu organizačnú štruktúru, väčší počet opatrení, zložitejšia
+politika KIB a mnoho ďalšieho skrytého v legislatívnych požiadavkách.
+
+\subsection*{Používatelia systému}
+Pre náš systém je používateľ každý a súčasne nikto, chýba mu správa používateľov -- prihlasovanie sa. Prístup k systému
+by potom mohli mať aj iní zamestnanci, pričom by sa nedostali k údajom, ktoré nie sú pre nich určené. Manažér KIB by mal
+možnosť využiť systém na vzdelávanie alebo prípravu dotazníkov -- opýtaná osoba by sa prihlásila, dotazník vyplnila a
+odpovede by boli priamo uložené a prístupné v systéme.
+
+Je to aj otázka dostupnosti, čo ak by náš systém (alebo jeho derivácia) bola v budúcnosti úspešná? Malé ISVS by si nemuseli
+  robiť starosti s inštaláciou systému, ba priam systém by bežal vo vl=dnom cloude. Na to ale treba vyriešiť autentifikáciu
+a autorizáciu používateľov systému.
+
+\subsection*{Upozornenia, správy a hlásenia}
+Systém by mohol mať pomocnú funkcionalitu, ako hlásenie bezpečnostných incidentov pre zamestnancov\footnote{Koniec koncov
+aj zákony vyžadujú zaviesť v organizácií jednotný systém hlásenia.}, evidencia bezpečnostných incidentov a generovanie
+reportov za nejaké obdobie. Keby sa niekto pozabudol, systém by ho mohol v pravidelných intervaloch upozorniť, napr.
+pripomenúť manažérovi KIB, že má neošetrené rizika.
+
+\subsection*{Používateľská príručka}
+
+\subsection*{Zamestnanci a role}
+
+\subsection*{Kontrola ISMS, slovník a legislatíva}
+
+\section{Zhrnutie}
