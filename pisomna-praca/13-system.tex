@@ -13,8 +13,8 @@ systém pre manažéra KIB, ktorý:
 
 Pri vypracovaní systému a písaní obsahu sme vychádzali z materiálov a metodík  BSI 200-1\cite{BSI1}, BSI 200-2\cite{BSI2},
 BSI 200-3\cite{BSI3}, kompendia IT-Grundschutz\cite{GSK} a IT-Grundschutz Online Course\cite{GSK-OC}. Rozhranie systému
-je prevedené ako webová aplikácia, beží lokálne na počítači a je sprístupnený cez ľubovoľný prehliadač. Zdrojový kód je
-v prílohe a súčasne je zverejnený na GitHub-e \url{https://github.com/AntonKica/spvbp-isvs-portal-backend}.
+je prevedené ako webová aplikácia, beží lokálne na počítači a je prístupný cez ľubovoľný prehliadač. Zdrojový kód je v
+prílohe a súčasne je zverejnený na GitHub-e \url{https://github.com/AntonKica/spvbp-isvs-portal-backend}.
 
 V tejto kapitole sa ešte budeme venovať technickej špecifikácií, prezentácií výsledného systému, databázovému pohľadu a
 ako nakoniec tomu, ako spustiť systém. Teraz by sme sa pozreli na technickú špecifikáciu, nástroje a technológie použité
@@ -64,7 +64,7 @@ konzistenciu dát\footnote{Pracovali sme sami a chyby sme si ešte vedeli ustrá
 Na vývoj frontendu sme použili HTML5 a v menšom množstve JavaScript\footnote{Na verziach moc nezáleží, používali sme
 funkcionalitu podporovanú väčšinou, ak nie všetkými modernými prehliadačmi.}. Pre dosiahnite krajšieho a estetickejšieho
 vzhľadu\footnote{Pre čitateľa zdôraznime, aby od nás nečakal veľmi úhľadné vizuály, že sme informatici, nie grafici.}
-sme použili CSS sady nástrojov Bootstrap verzie 5.
+sme použili kaskádové štýly sady nástrojov Bootstrap verzie 5.
 
 Síce sme stránky písali v jazyku HTML, no na ich zobrazenie sme použili šablónovací jazyk a techniku SSR\footnote{Z angl.
 \textit{server-side rendering}, spôsob, kde sa celá stránka plne zostaví/vykreslí na strane servera, pričom server zašle
@@ -90,7 +90,6 @@ KIB. Systém sa skladá z dvoch hlavných častí, jednej menšej -- úvod (obr.
   \caption{Stránka s návodom.}
   \label{fig:isms-setup-stranka}
 \end{figure}
-
 Ďalej si prejdeme obsah každej časti s krátkym komentárom.
 
 \subsection*{Systém: Úvodná stránka}
@@ -123,14 +122,14 @@ Vypracovali sme 12 častí, celé to zakončuje politika KIB. Ďalej zľahka naz
 ISMS.
 
 \subsection*{Systém: Oficiálne informácie} 
-V tejto krátkej časti uživateľ vyplní krátky dotazník o svovjej organizácii -- názov, charakter organizácie, na základe
+V tejto krátkej časti uživateľ vyplní krátky dotazník o svojej organizácii -- názov, charakter organizácie, na základe
 čoho, resp. ktorého zákona bola zriadená ich organizácia.
 
 \subsection*{Systém: Určenie stavu organizácie}
 V tejto časti sme postupovali podľa BSI 200-2\cite{BSI2}, kapitola \enquote{3.2.1 Determining the framework conditions}.
 Zisťujeme odpovede na základné otázky ohľadom organizácie -- Aké sú ciele organizácie? Aké organizačné štruktúry máte prítomné
-organizácií? Spolupracujete s tretími stranami? Aký je strategický kontext organizácie? Uvádzame aj príklady, aby sme manažérovi
-KIB pomohli sa zorientovať a správne odpovedať (obr. \ref{fig:determining-framework-conditions}). 
+v organizácií? Spolupracujete s tretími stranami? Aký je strategický kontext organizácie? Uvádzame aj príklady, aby sme
+manažérovi KIB pomohli sa zorientovať a správne odpovedať (obr. \ref{fig:determining-framework-conditions}). 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.85 \textwidth]{images/determining-framework-conditions}
@@ -140,7 +139,7 @@ KIB pomohli sa zorientovať a správne odpovedať (obr. \ref{fig:determining-fra
 Na konci čaká manažéra KIB dotazník, kde má identifikovať dôležité biznisové procesy.
 
 Biznisové procesy sa dajú odvodiť od poslania organizácie a sú zaujímavé tým, že predstavujú informačné toky. Spracovávajú
-sa v nich informácie a pre to sú pre manažéra KIB dôležité, aby mohol neskôr identifikovať kritické biznisové procesy,
+sa v nich informácie a preto sú pre manažéra KIB dôležité, aby mohol neskôr identifikovať kritické biznisové procesy,
 ktoré budú tvoriť východisko pre vysokoúrovňovú analýzu rizík.
 
 
@@ -217,19 +216,18 @@ trojúrovňovú škálu pravdepodobnosti výskytu, úrovne dopadu a klasifikáci
   \caption{Matica klasifikácie rizika.}
   \label{fig:risk-classification-matrix}
 \end{figure}
-Škály sme vysvetlili, aby pre hrozby vedel manažér KIB čo najpresnejšie vyhodnotiť pravdepodobnosť výskytu a úroveň dopadu
-hrozby. Nakoniec sme sa opýtali, aká je akceptovateľná úroveň rizika v organizácii.
-
-Výsledok klasifikácie rizík využijeme v ďalšej časti o bezpečnostných opatreniach.
+Škály sme vysvetlili, aby pre hrozby vedel manažér KIB čo najpresnejšie vyhodnotiť pravdepodobnosť výskytu a úroveň dopadu.
+Nakoniec sme sa opýtali, aká je akceptovateľná úroveň rizika v organizácii. Výsledok klasifikácie rizík využijeme v ďalšej
+časti o bezpečnostných opatreniach.
 
 \subsection*{Systém: Bezpečnostné opatrenia} 
 Vysoké úrovne rizík musí manažér KIB ošetriť, no na to, aby mohol znížiť riziká na akceptovateľnú úroveň, musí prijať
 bezpečnostné opatrenia. Časť s bezpečnostnými opatreniami sme podľa hrozieb rozdelili do príslušných oblasti. Na ukážku
-sme v systéme vypracovali oblasť \enquote{Zamestnanci a ľudské chyby a omyly}, ktorú ďalej rozoberieme.
+sme v systéme vypracovali oblasť \enquote{Zamestnanci, ľudské chyby a omyly}, ktorú ďalej rozoberieme.
 
-Pri vypracovaní bezpečnostných opatrení pre oblasť \enquote{Zamestnanci a ľudské chyby a omyly} sme vychádzali z kompendia
+Pri vypracovaní bezpečnostných opatrení pre oblasť \enquote{Zamestnanci, ľudské chyby a omyly} sme vychádzali z kompendia
 IT-Grundshutz\cite{GSK}, kapitoly \enquote{ORP.2 Personnel}. Na začiatku pripomeniemie manažérovi KIB úroveň rizika, ktorú
-určil v časti systému \enquote{Riziká}, kde ho aj odkážeme, v prípade že by chcel prehodnotiť svoje rozhodnutie. Vo zvyšnej
+určil v časti systému \enquote{Riziká}, kde ho aj odkážeme v prípade, že by chcel prehodnotiť svoje rozhodnutie. Vo zvyšnej
 časti stránky rozoberieme zodpovednosť, čiu spoluprácu bude musieť manažér KIB vyhľadať, slabé miesta tejto oblasti a
 zakončíme to rozsiahlym zoznamom navrhovaných bezpečnostných opatrení na zníženie identifikovaného rizika.
 
@@ -242,8 +240,8 @@ dôležitá osoba, je to jeho kontakt na vedenie organizácie.}.
 
 \subsection*{Systém: Bezpečnostné princípy}
 Bezpečnostné princípy sú ďalšou dôležitou súčasťou zriadenia ISMS, metodiky BSI neponúkajú žiaden agregát bezpečnostných
-princípov, vychádzali sme z magisterský prednášok o manažmente KIB\cite{MngtKIB}. Účelom bezpečnostných príncípov je v
-na celoorganizačnej úrovni zvyšovať KIB pri zaobchádzaní so systémami, informáciami a informačnými technológiami organizácie.
+princípov, vychádzali sme z magisterský prednášok o manažmente KIB\cite{MngtKIB}. Účelom bezpečnostných príncípov je 
+zvyšovať na celoorganizačnej úrovni KIB pri zaobchádzaní so systémami, informáciami a informačnými technológiami organizácie.
 Manažéra KIB oboznámime s niekoľkými základnými bezpečnostnými princípmi a na záver mu dáme možňosť si vybrať tie princípy,
 ktoré by si želal aplikovať v celej organizácii.
 
@@ -256,7 +254,7 @@ upraví/doplní pracovné povinnosti vyplývajúce z povinností KIB.}.
 
 \subsection*{Systém: Politika KIB} 
 Dostali sme sa do poslednej časti nášho systému o zavádzaní ISMS. Obsah, resp. šablónu politiky KIB sme vypracovali na
-základe internej štúdie MIRRI (osobnej komunikácie)\cite{MIRRI-policy-KIB}. Slohové časti sme spísali za manažéra KIB a
+základe internej štúdie MIRRI (osobnej komunikácie)\cite{MIRRI-security-policy}. Slohové časti sme spísali za manažéra KIB a
 do textu sme doplnili informácie, ktoré sme získali v nadväzujúcich častiach systému\footnote{Rôzne informácie o organizácii,
 ciele KIB, hlavné aktíva, hrozby, riziká alebo princípy.}. Do politiky KIB sme zakomponovali aj sekciu o riešení kybernetických
 incidentov, ktorej sme sa síce nevenovali, ale ilustračne sme ju zakomponovali.
@@ -277,13 +275,47 @@ Na generovanie nasledovnej databázovej schémy sme použili nástroj DBeaver.
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{images/database-diagram-isms-setup}
-    \caption{A}
-    \label{fig:normal-protection-level}
+    \caption{Hlavná schéma \enquote{ISMS setup}.}
+    \label{fig:database-diagram-isms-setup}
   \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{images/database-diagram-other-tables}
-    \caption{B}
-    \label{fig:business-process-protection-level}
+    \caption{Zvyšné schémy.}
+    \label{fig:database-diagram-other-tables}
   \end{subfigure}
-    \caption{Výňatok zo sekcie určenia úrovne KIB.}
+    \caption{Databázová schéma.}
 \end{figure}
+
+Na obrázku \ref{fig:database-diagram-isms-setup} vidíme agregátnu triedu, resp. tabuľku\footnote{Pojmy trieda, schéma a
+tabuľka ľubovoľne zamieňame, myslíme tým jednu a tú istú vec, v tomto prípade zoskupenie premenných/stĺpcov.}, ktorú sme
+nazvali \enquote{ISMS setup}. Je to jedinečná trieda, v systéme predstavuje singleton a obsahuje takmer väčšinu
+zozbieraných dát -- reťazce znakov, zoznamy prvkov číselníkov a mapovania \enquote{one to many}. Trieda \enquote{ISMS
+setup} slúźi na zber dát, ktoré sme použili ako vstup pri generovaní politiky KIB.
+
+Na druhom obrázku \ref{fig:database-diagram-other-tables} vidíme schémy biznisových procesov, aplikácií, IT systémov a
+miestností. Tu sme jasnejšie videli výhodu separátnych tried a perspektívu pri budúcom vývoji softvéra, preto sme ich
+vyčlenili do samostatných tried a nie sú v zhluku dát \enquote{ISMS setup}.
+
+Trieda \enquote{ISMS setup} môže pôsobiť mohutne a určite sú v nej informácie, ktoré by sa dali vyčleniť, ináč zoskupiť
+alebo logicky rozdeliť do samostatných tried. Zatiaľ sme sa ale rozhodli uchovať aj nesúvisiace dáta v jednej tabuľke, 
+zjednodušovalo to celkový model aj kód systému. Pri ďalšom vývoji systému, keď by sme mali lepšiu perspektívu a lepšie
+chápali súvislostí medzi dátami v systéme, túto triedu určite rozbijeme a upraceme.
+
+\section{Ako spustiť systém}
+Na spustenie systému je potrebné mať nainštalovanú Javu verzie 21 a dostupnú\footnote{Lokálne alebo vzdialene nakonfigurovanú.}
+databázu PostgreSQL verzie aspoň 16, predpokladáme prácu s príkazovým riadkom na operačnom systéme GNU/Linux. Zdrojový
+kód skompilujeme nasledujúcim príkazom: 
+\begin{lstlisting}[language=bash]
+./gradlew build -x test
+\end{lstlisting}
+Keď sa úspešne skončí kompilácia zdrojového kódu, spustíme systém nasledujúcim príkazom, pričom nakonfigurujeme
+databázové pripojenie parametrami JVM\footnote{Angl. \textit{Java virtual machine}, virtuálny stroj Javy.} --
+v hranatých zátvorkách sú Vami zvolené/známe parametre:
+\begin{lstlisting}[language=bash, breaklines=true]
+java \
+  -Ddatasource.application.jdbcUrl=jdbc:postgresql://[server + port]/[databaza] \
+  -Ddatasource.application.username=[pouzivatel] \
+  -Ddatasource.application.password=[heslo] \
+  -jar build/libs/spvbp-isvs-portal-backend-0.0.1-SNAPSHOT.jar
+\end{lstlisting}
+Systém je teraz prístupný na adrese a porte http://localhost:8000.
