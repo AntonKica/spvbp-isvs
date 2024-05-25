@@ -13,64 +13,63 @@ systém pre manažéra KIB, ktorý:
 
 Pri vypracovaní systému a písaní obsahu sme vychádzali z materiálov a metodík  BSI 200-1\cite{BSI1}, BSI 200-2\cite{BSI2},
 BSI 200-3\cite{BSI3}, kompendia IT-Grundschutz\cite{GSK} a IT-Grundschutz Online Course\cite{GSK-OC}. Rozhranie systému
-je prevedené ako webová aplikácia, beží lokálne na počítači a je prístupný cez ľubovoľný prehliadač. Zdrojový kód je v
-prílohe a súčasne je zverejnený na GitHub-e \url{https://github.com/AntonKica/spvbp-isvs-portal-backend}.
+sme realizovali vo forme webovej aplikácie, systém beží lokálne na počítači a je prístupný cez ľubovoľný prehliadač.
+Zdrojový kód je v prílohe a súčasne je zverejnený na GitHub-e \url{https://github.com/AntonKica/spvbp-isvs-portal-backend}.
 
-V tejto kapitole sa ešte budeme venovať technickej špecifikácií, prezentácií výsledného systému, databázovému pohľadu a
-ako nakoniec tomu, ako spustiť systém. Teraz by sme sa pozreli na technickú špecifikáciu, nástroje a technológie použité
-na vypracovanie systému.
+V tejto kapitole sa budeme venovať technickej špecifikácií, prezentácií výsledného systému, databázovému pohľadu a
+ako nakoniec tomu, ako spustiť systém. Teraz prejdeme k ďalšej časti, kde popíšeme technickú špecifikáciu, nástroje a
+technológie použité na vypracovanie systému.
 
 \section{Technická špecifikácia}
 
 Systém je logicky rozdelený na dve vrstvy -- backend a frontend\footnote{Pre slovenských čítateľov sú známejšie v poradí pojmy
 serverová časť a klientská časť. My sme sa rozhodli používať anglické výrazy, ktoré nám prišli prirodzenejšie.}. Backend
-tvorí logiku systému, spracováva dáta a ukadá ich do databázy. Frontend poskytuje užívateľské rozhranie, užívateľ tu zadáva
+tvorí logiku systému, spracováva dáta a ukladá ich do databázy. Frontend poskytuje užívateľské rozhranie, užívateľ tu zadáva
 vstupné údaje, ktoré sa posielajú backendu na spracovanie. Komunikácia medzi týmito dvoma vrstvami je realizovaná prostredníctvom
-protokolu HTTP a RPC\footnote{Z angl. \textit{remote procedure call}, volanie vzdialenej procedúry, vďaka ktorému možno
-vykonať kód zo vzdialeného miesta, na inom zariadení.}.
+protokolu \acrshort{HTTP} a \acrshort{RPC}\footnote{Z angl. \textit{remote procedure call}, volanie vzdialenej procedúry,
+vďaka ktorému možno vykonať kód zo vzdialeného miesta, na inom zariadení.}.
 
 \subsection*{Backend}
-Na vývoj backendu sme použili programovací jazyk Java verzie 21 a ekosystém vybudovaný kolo nej. Voľba programovacieho jazyka
+Na vývoj backendu sme použili programovací jazyk Java verzie 21 a ekosystém vybudovaný okolo nej. Voľba programovacieho jazyka
 bola motivovaná najmä tým, že:
 \begin{itemize}
-  \item disponujeme znalosťou a skúsenosťou s Javou a jej ekosystémom,
-  \item frameworky, knižnice a nástroje Javy boli pre nás nápomocné, pri vývoji podstatných častí systému a
+  \item dobré poznáme jazyk Java a máme skúsenosti jej ekosystémom,
+  \item frameworky, knižnice a nástroje Javy sme využívali pri vývoji podstatných častí systému a
   \item sme nemuseli zbytočne strácať čas nad riešením technických úloh/problémov nesúvisiacimi s našou bakalárskou prácou.
 \end{itemize}
 
-Správu knižníc a balíčkov, kompiláciu a spustenie\footnote{Toto do istej miery nie je pravda, keďže na lokálny vývoj sme
-použuli integrované vývojové prostredie.} sme vyriešili pomocou nástroja Gradle verzie 8.
+Správu knižníc a balíčkov, kompiláciu a spustenie sme vyriešili pomocou nástroja Gradle verzie 8.
 
-So spracovaním RPC sme si pomohli frameworkom Spring Boot verzie 3, ktorý nám tiež pomohol s:
+Na spracovanie RPC sme použili framework Spring Boot verzie 3, ktorý sme tiež využili aj na:
 \begin{itemize}
   \item celkovou konfiguráciou backendu,
-  \item prehľadným definovaním rozhrania a endpointov\footnote{Koncové body, URL linka v prehliadači.} pre komunikáciu s
-    frontendom
+  \item prehľadným definovaním rozhrania a endpointov\footnote{Koncové body, \acrshort{URL} linka v prehliadači.} pre
+    komunikáciu s frontendom
   \item serializáciou/deserializáciou vystupných/vstupných dát a
   \item manažmentom tried a repozitárov.
 \end{itemize}
 
 Na ukladanie dát systému sme použili SQL databázu PostgreSQL verzie 16. S databázou sme nekomunikovali priamo, ale pomocou
-ORM\footnote{Z angl. \textit{object-relation mapping}, objektovo relačné mapovanie, vďaka ktorému sú triedy zmapované
-na štruktúry databázy.} frameworku Hibernate verzie 6. Hibernate nám pomohol s opakovaným kódom\footnote{Veľké množstvo
-opakovaný kódu je dlhodobá kritika programovacieho jazyka Java.} a pri vývoji systému, hlavne pri zmenách tried\footnote{Nemuseli
-sme strácať čas úpravou rozhrania medzi triedami a korešpondujúcimi schémami v databáze.}.
+\acrshort{ORM}\footnote{Z angl. \textit{object-relation mapping}, objektovo relačné mapovanie, vďaka ktorému sú triedy zmapované
+na štruktúry databázy.} frameworku Hibernate verzie 6. Pomocou Hibernate sme vyriešili problém s opakovaným kódom\footnote{Dizajnový
+problém programovacích jazykov, kde programátor musí písať opakovane veľké množstvo kódu, aby dosiahol drobnú funkcionalitu.}
+a nemuseli sme opakovane písať SQL dotazy pri zmenách štruktúry tried.
 
-Na testovanie sme využili knižnicu JUnit verzie 5. Avšak, v prebehu vývoja sme zistili, že nie je potrebné písať testy,
-ktoré by nás maximálne zdržiavali. Dôvodom bolo to, že pri zmenách kódu sme nepotrebovali kontrolovať funkcionalitu a 
+Na testovanie sme využili knižnicu JUnit verzie 5. Avšak, v priebehu vývoja sme zistili, že nie je potrebné písať testy,
+ktoré by nás nanajvýš zdržiavali. Dôvodom bolo to, že pri zmenách kódu sme nepotrebovali kontrolovať funkcionalitu a 
 konzistenciu dát\footnote{Pracovali sme sami a chyby sme si ešte vedeli ustrážiť.}.
 
 \subsection*{Frontend}
-Na vývoj frontendu sme použili HTML5 a v menšom množstve JavaScript\footnote{Na verziach moc nezáleží, používali sme
-funkcionalitu podporovanú väčšinou, ak nie všetkými modernými prehliadačmi.}. Pre dosiahnite krajšieho a estetickejšieho
+Na vývoj frontendu sme použili HTML5 a v menšom rozsahu JavaScript\footnote{Na verziách veľmi nezáleží, používali sme
+funkcionalitu podporovanú väčšinou, ak nie všetkými modernými prehliadačmi.}. Pre dosiahnite estetickejšieho
 vzhľadu\footnote{Pre čitateľa zdôraznime, aby od nás nečakal veľmi úhľadné vizuály, že sme informatici, nie grafici.}
 sme použili kaskádové štýly sady nástrojov Bootstrap verzie 5.
 
-Síce sme stránky písali v jazyku HTML, no na ich zobrazenie sme použili šablónovací jazyk a techniku SSR\footnote{Z angl.
-\textit{server-side rendering}, spôsob, kde sa celá stránka plne zostaví/vykreslí na strane servera, pričom server zašle
-klientovi čistý HTML súbor.}, kde nám opäť pomohol ekosystém Javy. Šablónovací nástroj Thymeleaf verzie 3 nám pomohol so
-svojim dialektom HTML prehľadne zobraziť dáta, zoznamy, triedy a definovať si tzv. fragmenty -- vizuálne prvky, ktoré sme mohli
-opakovane použiť pri tvorbe jednotlivých stránok.
+Stránky sme síce písali v jazyku \acrshort{HTML}, no na ich zobrazenie sme použili šablónovací jazyk a techniku
+\acrshort{SSR}\footnote{Z angl. \textit{server-side rendering}, spôsob, kde sa celá stránka plne zostaví/vykreslí na
+strane servera, pričom server zašle klientovi čistý HTML súbor.}, kde sme opäť využili ekosystém Javy. Šablónovací
+nástroj Thymeleaf verzie 3 nám pomohol so svojim dialektom HTML prehľadne zobraziť dáta, zoznamy, triedy a definovať
+tzv. fragmenty -- vizuálne prvky, ktoré sme mohli opakovane použiť pri tvorbe jednotlivých stránok.
 
 \section{Prezentácia výsledného systému}
 Pomocou nástrojov využitých v backende a frontende sme vytvorili ukážkový systém, s ktorým interaguje používateľ, manažér
@@ -94,23 +93,25 @@ KIB. Systém sa skladá z dvoch hlavných častí, jednej menšej -- úvod (obr.
 
 \subsection*{Systém: Úvodná stránka}
 Na úvodnej stránke (obr. \ref{fig:isms-uvodna-stranka}) predstavíme náš systém, uvedieme používateľa do problematiky a
-predstavíme mu zákony, ktoré sa ho týkajú -- ZoKB a ZoITVS. Pokračujeme metódou otázok, kde odhadneme, čo by sa manažér
-KIB mohol opýtať. Najprv manažérovi KIB vysvetlíme, prečo sa v organizácii musia zaoberať KIB (morálne a legislatívne
-dôvody) a vhodne to odôvodníme.
+predstavíme mu zákony, ktoré sa ho týkajú -- ZoKB a ZoITVS. Pokračujeme metódou kladenia otázok a odpovedí na ne, pričom
+odhadujeme, čo by sa manažér KIB mohol opýtať. Najprv manažérovi KIB vysvetlíme, prečo sa v organizácii musia zaoberať
+KIB (morálne a legislatívne dôvody) a vhodne to odôvodníme.
 
-Po tom, ako vysvetlíme potrebu venovať sa KIB, očakávame prirodzenú otázku -- Čo všetko musia (v očiach zákona) urobiť,
-aby v dostatočnej miere splnili zákonné požiadavky? Zľahka manažérovi KIB predložíme požiadavky ZoKB a ZoITVS, pričom ich 
-odkážeme na relevantné paragrafy (odkazujeme na portál Slov-lex). Tiež spomenieme úzko súvisiace vykonávacie predpisy, a to,
-že predpokladáme, že patria do kategórie I z hľadiska kategorizácie sieti a informačných systémov a súčasne do kategórie
-I ako prevádzkovatelia ISVS.
+Po tom, ako vysvetlíme potrebu venovať sa KIB, očakávame prirodzenú otázku -- Čo všetko musia (z hľadiska zákona) urobiť,
+aby v dostatočnej miere splnili zákonné požiadavky? Manažéra KIB stručne oboznámime s požiadavkami ZoKB a ZoITVS, pričom
+ho  odkážeme na relevantné paragrafy (odkazujeme na portál Slov-lex). Tiež spomenieme súvisiace vykonávacie predpisy,
+a predpoklad, že systémy patria do kategórie I z hľadiska kategorizácie sieti a informačných systémov a súčasne do
+kategórie I ako prevádzkovatelia ISVS.
 
-Nakoniec očakávame otázku -- Čo to znamená splniť požiadavky, ktoré im boli uložené? V krátkosti opíšeme celkový postup
+Nakoniec očakávame otázku -- Čo to znamená splniť požiadavky, ktoré boli uložené organizácii? V krátkosti opíšeme celkový postup
 zavádzania ISMS a ktoré kroky budú musieť podniknúť. Po všetkých otázkach odkážeme používateľa na časť \enquote{Zavádzanie ISMS}.
 
 \subsection*{Systém: Zavádzanie ISMS} 
-V tejto časti systému (obr. \ref{fig:isms-setup-stranka}) vidíme prehľad častí, ktorými prevedieme používateľa, aby mohol v organizácii
-zaviesť ISMS. V jednotlivých častiach, ak vychádzam z metodík BSI, tak na začiatku uvedieme metodiku a kapitolu/sekciu,
-z ktorej sme čerpali (obr. \ref{fig:read-more}), ak by si čitateľ chcel naštudovať problematiku podrobnejšie.
+V tejto časti systému (obr. \ref{fig:isms-setup-stranka}) vidíme prehľad častí, ktorými prevedieme používateľa, aby
+mohol v organizácii zaviesť ISMS. V jednotlivých častiach, ak vychádzam z metodík \acrshort{BSI}, tak na začiatku
+uvedieme metodiku a kapitolu/sekciu, z ktorej sme čerpali (obr. \ref{fig:read-more}), ak by si čitateľ chcel naštudovať
+problematiku podrobnejšie.
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.95 \textwidth]{images/read-more}
@@ -118,16 +119,17 @@ z ktorej sme čerpali (obr. \ref{fig:read-more}), ak by si čitateľ chcel našt
   \label{fig:read-more}
 \end{figure}
 
-Vypracovali sme 12 častí, celé to zakončuje politika KIB. Ďalej zľahka nazrieme a okomentujeme samostatné časti zavádzania
-ISMS.
+Postup pri zavádzaní ISMS je zložený z 12-tich krokov a je zavŕšený vypracovaním základného dokumentu ISMS -- politiky KIB.
+Ďalej stručne popíšeme a vysvetlíme jednotlivé kroky.
 
 \subsection*{Systém: Oficiálne informácie} 
-V tejto krátkej časti uživateľ vyplní krátky dotazník o svojej organizácii -- názov, charakter organizácie, na základe
-čoho, resp. ktorého zákona bola zriadená ich organizácia.
+V tejto časti užívateľ vyplní krátky dotazník o svojej organizácii -- názov, charakter organizácie, na základe
+čoho, resp. ktorého zákona bola zriadená ich organizácia. Tieto informácie využijeme aj neskôr pri písaní politiky KIB
+na identifikovanie poslania a hlavných aktív organizácie.
 
 \subsection*{Systém: Určenie stavu organizácie}
 V tejto časti sme postupovali podľa BSI 200-2\cite{BSI2}, kapitola \enquote{3.2.1 Determining the framework conditions}.
-Zisťujeme odpovede na základné otázky ohľadom organizácie -- Aké sú ciele organizácie? Aké organizačné štruktúry máte prítomné
+Zisťujeme odpovede na základné otázky ohľadom organizácie -- Aké sú ciele organizácie? Aké organizačné štruktúry existujú
 v organizácií? Spolupracujete s tretími stranami? Aký je strategický kontext organizácie? Uvádzame aj príklady, aby sme
 manažérovi KIB pomohli sa zorientovať a správne odpovedať (obr. \ref{fig:determining-framework-conditions}). 
 \begin{figure}[h]
@@ -138,9 +140,10 @@ manažérovi KIB pomohli sa zorientovať a správne odpovedať (obr. \ref{fig:de
 \end{figure}
 Na konci čaká manažéra KIB dotazník, kde má identifikovať dôležité biznisové procesy.
 
-Biznisové procesy sa dajú odvodiť od poslania organizácie a sú zaujímavé tým, že predstavujú informačné toky. Spracovávajú
-sa v nich informácie a preto sú pre manažéra KIB dôležité, aby mohol neskôr identifikovať kritické biznisové procesy,
-ktoré budú tvoriť východisko pre vysokoúrovňovú analýzu rizík.
+Biznisové procesy sa dajú odvodiť od poslania organizácie a sú zaujímavé tým, že zároveň predstavujú informačné toky.
+Spracovávajú sa v nich informácie a preto sú pre manažéra KIB dôležité, aby mohol neskôr identifikovať kritické biznisové
+procesy\footnote{V slovenčine neexistuje ekvivalentný termín, biznosové procesy sú procesy súvisiace s výkonom činností
+zameraných na plnenie poslania organizácie.}, ktoré budú tvoriť východisko pre vysokoúrovňovú analýzu rizík.
 
 
 \subsection*{Systém: Formulovanie všeobecných cieľov KIB a určenie úrovne KIB}
@@ -149,19 +152,19 @@ objectives} a \enquote{3.2.3 Determining the appropriate security level of the b
 na dve sekcie.
 
 Prvá sekcia sa venuje formulovaniu všeobecných cieľov KIB. Manažéra KIB sa snažíme podnietiť, aby sformuloval všeobecné ciele
-KIB, ktoré vychádzajú z poslania organizácie a sústreďujú sa na základné hodnoty KIB (dôvernosť, integritu a dostupnosť).
+KIB, ktoré vychádzajú z poslania organizácie a sústreďujú sa na základné aspekty KIB (dôvernosť, integritu a dostupnosť).
 Takáto skorá formulácia cieľov KIB má pomôcť zosúladiť politiku KIB so skutočnými požiadavkami KIB organizácie\footnote{Manažér 
 KIB by si tu mal uvedomiť, čo chce a má dosiahnuť pomocou KIB a celkovo zriadením ISMS.}. Manažér KIB za pomoci príkladov
 sformuluje všeobecné ciele KIB a uloží ich do systému.
 
-Druhá sekcia sa venuje určeniu úrovne KIB, používateľovi predstavíme a vysvetlíme tri úrovne ochrany -- normálna, stredná
-a vysoká (obr. \ref{fig:normal-protection-level}).
+Druhá sekcia sa venuje určeniu úrovne KIB, používateľovi predstavíme a vysvetlíme tri úrovne ochrany -- základná, stredná
+a vysoká (obr. \ref{fig:basic-protection-level}).
 \begin{figure}[h]
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{images/normal-protection-level}
-    \caption{Vysvetlenie normálnej úrovne ochrany KIB.}
-    \label{fig:normal-protection-level}
+    \includegraphics[width=\textwidth]{images/basic-protection-level}
+    \caption{Vysvetlenie základnej úrovne ochrany KIB.}
+    \label{fig:basic-protection-level}
   \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{images/business-process-protection-level}
@@ -171,7 +174,7 @@ a vysoká (obr. \ref{fig:normal-protection-level}).
     \caption{Výňatok zo sekcie určenia úrovne KIB.}
 \end{figure}
 Nakoniec pre biznisové procesy identifikované v predchádzajúcej časti určí, akú úroveň ochrany si vyžadujú vzhľadom k 
-základným hodnotám KIB a prípadne odôvodní, prečo tak urobil (obr. \ref{fig:business-process-protection-level}).
+základným aspektom KIB a prípadne odôvodní, prečo tak urobil (obr. \ref{fig:business-process-protection-level}).
 
 \subsection*{Systém: Akvizícia aplikácií, IT systémov a miestností} 
 V tejto časti sme postupovali podľa BSI 200-2\cite{BSI2}, kapitol \enquote{3.2.2 Formulate general information security
@@ -202,9 +205,9 @@ ho necháme si vybrať relevantné hrozby (obr. \ref{fig:relevant-threat-selecti
 \end{figure}
 
 \subsection*{Systém: Riziká} 
-Dostali sme sa do stavu, keď máme hlavné aktíva a relevantné hrozby, ktorým čelia, teraz môžeme vyhodnotiť/klasifikovať
+Máme identifikované hlavné aktíva a relevantné hrozby, ktorým tieto aktíva čelia. Teraz môžeme vyhodnotiť/klasifikovať
 riziká, ktoré z nich vyplývajú. Manažéra KIB oboznámime s dvoma metódami, ako klasifikovať riziko -- kvalitatívna metóda
-a kvantitatívna metóda, my sme sa rozhodli postupovať kvantitatívnou metódou.
+a kvantitatívna metóda, my sme sa rozhodli postupovať kvantitatívnou metódou, ktorá používa aj metodika BSI 200-3\cite{BSI3}.
 
 Výsledkom kvantitatívnej metódy je dvojrozmerná matica, kde na horizontálnej osi je vyjadrená pravdepodobnosť naplnenia
 hrozby, na vertikálnej osi je vyjadrená úroveň dopadu hrozby\footnote{Obsah horizontálnej osi môžme vymeniť za obsah
@@ -232,21 +235,21 @@ určil v časti systému \enquote{Riziká}, kde ho aj odkážeme v prípade, že
 zakončíme to rozsiahlym zoznamom navrhovaných bezpečnostných opatrení na zníženie identifikovaného rizika.
 
 \subsection*{Systém: Formovanie organizačnej štruktúry} 
-V tejto časti sme mierne vychádzali z BSI 200-2\cite{BSI2}, kapitoly \enquote{4 Organisation of the security process} a
+V tejto časti sme čiastočne vychádzali z BSI 200-2\cite{BSI2}, kapitoly \enquote{4 Organisation of the security process} a
 držali sme sa ZoITVS \S 19 ods(1), ktorý popisuje organizáciu bezpečnostného procesu. Vysvetlili sme, čo to znamená sformovať
 organizačnú štruktúru, jej členenie na zložky (riadiacu, výkonnú a kontrolnú) a popísali sme základne roly KIB. Na konci
 nás (aj v mene manažéra KIB) špeciálne zaujímalo, kto je garantom KIB v organizácií\footnote{Pre manažéra KIB je to
 dôležitá osoba, je to jeho kontakt na vedenie organizácie.}.
 
 \subsection*{Systém: Bezpečnostné princípy}
-Bezpečnostné princípy sú ďalšou dôležitou súčasťou zriadenia ISMS, metodiky BSI neponúkajú žiaden agregát bezpečnostných
-princípov, vychádzali sme z magisterský prednášok o manažmente KIB\cite{MngtKIB}. Účelom bezpečnostných príncípov je 
-zvyšovať na celoorganizačnej úrovni KIB pri zaobchádzaní so systémami, informáciami a informačnými technológiami organizácie.
-Manažéra KIB oboznámime s niekoľkými základnými bezpečnostnými princípmi a na záver mu dáme možňosť si vybrať tie princípy,
-ktoré by si želal aplikovať v celej organizácii.
+Bezpečnostné princípy určujú filozofiu ISMS a sú povinnou súčasťou politiky KIB. Metodiky BSI neponúkajú žiaden zoznam
+bezpečnostných princípov, preto sme vychádzali z magisterský prednášok o manažmente KIB\cite{MngtKIB}. Účelom
+bezpečnostných princípov je explicitne stanoviť základné zásady, ktoré sa premietajú tak do riešení KIB ako aj celej
+činnosti organizácie. Manažéra KIB oboznámime s niekoľkými základnými bezpečnostnými princípmi a na záver mu dáme
+možnosť si vybrať tie princípy, ktoré by si želal aplikovať v celej organizácii.
 
 \subsection*{Systém: Pred spísaním politiky} 
-Táto časť systému je taká \enquote{pseudo} časť, kde sa manažéra KIB pýtame na rôzne veci súvisiace so spísaním a vydaním
+V tejto časti systému sa manažéra KIB pýtame na rôzne veci súvisiace so spísaním a vydaním
 politiky KIB. Opýtame sa na to, s kým bude musieť prerokovať navrhnutú politiku KIB, akým spôsobom bude vydaná, či majú v
 organizácii vypracované nejaké dokumenty súvisiace s KIB a na zamestnancov zodpovedných za rozličné oddelenia
 organizácie\footnote{Na ilustráciu, za pomoci zamestnanca zodpovedného za personálnu agendu, manažér KIB vhodne
@@ -254,12 +257,13 @@ upraví/doplní pracovné povinnosti vyplývajúce z povinností KIB.}.
 
 \subsection*{Systém: Politika KIB} 
 Dostali sme sa do poslednej časti nášho systému o zavádzaní ISMS. Obsah, resp. šablónu politiky KIB sme vypracovali na
-základe internej štúdie MIRRI (osobnej komunikácie)\cite{MIRRI-security-policy}. Slohové časti sme spísali za manažéra KIB a
-do textu sme doplnili informácie, ktoré sme získali v nadväzujúcich častiach systému\footnote{Rôzne informácie o organizácii,
-ciele KIB, hlavné aktíva, hrozby, riziká alebo princípy.}. Do politiky KIB sme zakomponovali aj sekciu o riešení kybernetických
-incidentov, ktorej sme sa síce nevenovali, ale ilustračne sme ju zakomponovali.
+základe internej štúdie MIRRI (osobnej komunikácie)\cite{MIRRI-security-policy}. Formulácie časti textov sme spísali za
+manažéra KIB a do textu sme doplnili informácie, ktoré sme získali v nadväzujúcich častiach systému\footnote{Rôzne
+informácie o organizácii, ciele KIB, hlavné aktíva, hrozby, riziká alebo princípy.}. Do politiky KIB sme zakomponovali
+aj sekciu o riešení kybernetických incidentov, ktorej sme sa síce nevenovali, ale vzhľadom na jej dôležitosť sme ju
+zakomponovali.
 
-Táto politika KIB však nie je kompletná, chýbajú jej niektoré časti ktorým sme sa nevenovali, to sú najmä -- riadenie
+Táto politika KIB však nie je ešte kompletná, chýbajú jej niektoré časti ktorým sme sa nevenovali, to sú najmä -- riadenie
 informačných aktív, klasifikácia sieti a informačných systémov, kontinuita prevádzky, riadenie prístupov a niekoľko ďalších.
 
 \subsection*{Zvyšné časti systému} 
@@ -309,7 +313,7 @@ kód skompilujeme nasledujúcim príkazom:
 ./gradlew build -x test
 \end{lstlisting}
 Keď sa úspešne skončí kompilácia zdrojového kódu, spustíme systém nasledujúcim príkazom, pričom nakonfigurujeme
-databázové pripojenie parametrami JVM\footnote{Angl. \textit{Java virtual machine}, virtuálny stroj Javy.} --
+databázové pripojenie parametrami \acrshort{JVM}\footnote{Angl. \textit{Java virtual machine}, virtuálny stroj Javy.} --
 v hranatých zátvorkách sú Vami zvolené/známe parametre:
 \begin{lstlisting}[language=bash, breaklines=true]
 java \

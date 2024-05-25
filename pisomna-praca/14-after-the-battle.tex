@@ -71,6 +71,12 @@ I, no nahliadli sme aj do vyšších kategórií, kde sú požiadavky na prevád
 rádovo väčšie. V krátkosti to znamená viac povinností, komplexnejšiu organizačnú štruktúru, väčší počet opatrení, zložitejšia
 politika KIB a mnoho ďalšieho skrytého v legislatívnych požiadavkách.
 
+\subsection*{Modulárnosť}
+Vieme si zhruba predstaviť, aký veľký by vedel byť tento systém. V súvislosti s predchádzajúcim bodom, niektoré jeho časti
+nemusia byť relevantné pre každý typ organizácie\footnote{Ak si čitateľ spomenie, na toto sme  pýtali na začiatku zavádzania
+ISMS.} a možnosť zvoliť si potrebné časti by sprehľadnila systém.
+
+
 \subsection*{Používatelia systému}
 Pre náš systém je používateľ každý a súčasne nikto, chýba mu správa používateľov -- prihlasovanie sa. Prístup k systému
 by potom mohli mať aj iní zamestnanci, pričom by sa nedostali k údajom, ktoré nie sú pre nich určené. Manažér KIB by mal
@@ -87,10 +93,68 @@ aj zákony vyžadujú zaviesť v organizácií jednotný systém hlásenia.}, ev
 reportov za nejaké obdobie. Keby sa niekto pozabudol, systém by ho mohol v pravidelných intervaloch upozorniť, napr.
 pripomenúť manažérovi KIB, že má neošetrené rizika.
 
-\subsection*{Používateľská príručka}
+\subsection*{Zmeny zákonov}
+Zákon sa zvyknú meniť, ale ako by náš systém riešil zmeny zákonov je ešte otvorená otázka. Nemôžme len tak zmeniť obsah
+systému bez toho, aby sme o tom nejak informovali používateľa. Zatiaľ nemáme predstavu o vhodnom spôsobe, ako tento problém
+vyriešiť.
 
 \subsection*{Zamestnanci a role}
+Problém s tým, ako spracovávame zamestnancov a role sme už naštiepili pri pohľade na databázu a tabuľku \enquote{ISMS setup}.
+Bolo by potrebné vytvoriť vhodné triedy na reprezentáciu vzťahov zamestnancov, rolí, vlastníkov, aktív, procesov a pod.
+Manažér KIB by lepšie vedel \enquote{cestovať} v systéme cez rôzne prepojenia, čo by sprehľadnilo navigáciu v systéme.
+Tiež by to umožnilo ďalšiu funkcionalitu, napr. pre roly KIB by bola možná kontrola konfliktu záujmov, na čo by mohol
+systém upozorniť manažéra KIB.
 
 \subsection*{Kontrola ISMS, slovník a legislatíva}
+V prvotných návrhov systému sme sa zamýšľali nad mnohými funkcionalitami systému, karty \enquote{kontrola ISMS},
+\enquote{slovník} a \enquote{legislatíva} boli jednými z nich.
+
+Zavádzanie ISMS predstavuje mnoho krokov a manažér KIB by sa mohol ľahko stratiť v procese. S tým by mu pomohla časť
+\enquote{kontrola ISMS}, kde by bol prehľad splnených, rozpracovaných a zostávajúcich krokov.
+
+Karta \enquote{slovník} by bola prirodzená, keďže v KIB je mnoho termínov, v ktorých sa začínajúci manažér KIB môže 
+stratiť. Mať jedno miesto so všetkými pojmami a vysvetleniami by bolo veľmi nápomocné.
+
+Nakoniec, keď referujeme na rôzne sekcie zákonov, tak sa odkazujeme na portál Slov-lex, no z nášho pohľadu to má 
+jeden nedostatok. Keď odkazujeme na špecifický odsek alebo písmeno, nedokážeme používateľovi zvýrazniť podstatné časti,
+čo môže viesť k tomu, že sa v tom stratí a pri ďalšej príležitosti bude odradený si pozrieť obsah zákona. Toto sme chceli
+adresovať v karte \enquote{legislatíva}, kde by sme mali prítomné zákony a mali kontrolu nad nasmerovaním pozornosti
+čitateľa pri odkazoch na zákony.
+
+
+\subsection*{Používateľská príručka}
+Bakalárska práca ani systém neobsahujú žiadnu používateľskú príručku. Vypracovanie používateľskej príručky, návodov a
+dokumentácie systému by bolo esenciálne pre používateľov, ktorý by chceli prakticky používať náš systém.
+
+
 
 \section{Zhrnutie}
+
+Praktický návrhov a zlepšení vie byť nespočetne veľa, preto by sme si na koniec dovolili zhrnúť, čo z tejto bakalárskej
+práce je použiteľné a čo by bolo ešte potrebné urobiť, aby náš systém bol plnohodnotný. Použiteľné časti našej bakalárskej
+prace by sme zhrnuli na:
+\begin{itemize}
+  \item analýza právnych predpisov,
+  \item analýza právnych požiadaviek,
+  \item základné pojmy a informácie o KIB,
+  \item opis postupu zavádzania ISMS,
+  \item zber údajov o organizácii a
+  \item zobrazenie zozbieraných informácii.
+\end{itemize}
+Dôležité časti bakalárskeho systému, ktoré by bolo potrebné rozšíriť/prepracovať pre plnohodnotný systém by sme zhrnuli
+na:
+\begin{itemize}
+  \item vysvetlenie príbuznej legislatívy a problematiky,
+  \item vypracovanie politik druhej úrovne,
+  \item životný cyklus ISMS,
+  \item vypracovanie bezpečnostných projektov, riadenia aktív a rizík,
+  \item rozšírenie o kategórie II a III úrovne,
+  \item modulárnosť systému,
+  \item upozornenia, správy, hlásenia a kontrola stavu ISMS,
+  \item systémoví používatelia a
+  \item používateľská príručka.
+\end{itemize}
+
+Pri vypracovaní bakalárskej práce a jej systému sme sa dotli iba špičky ľadovca, ďalej zostáva preskúmať to, čo sa skrýva
+pod hladinou vody.
+

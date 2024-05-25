@@ -3,6 +3,12 @@
 % src: https://tex.stackexchange.com/a/10012
 \newcommand\lawsubtitle[1]{\begin{flushleft}\small\textit{#1}\end{flushleft}}
 
+Je v prirodzenom záujme každého vlastníka informačného systému, aby jeho údaje systému boli chránené a jeho systém bezpečne
+fungoval, preto by mal vlastník informačného systému zaistiť primeranú úroveň KIB vo svojej organizácií. Vlastníkom,
+prevádzkovateľom a správcom ISVS túto povinnosť stanovuje legislatíva. V tejto kapitole analyzujeme najdôležitejšie
+zákony a vykonávacie predpisy, ktoré stanovujú bezpečnostné požiadavky na ISVS.
+
+
 \section{Zákon č. 69/2018 Z. z.}
 \lawsubtitle{Zákon o kybernetickej bezpečnosti a o zmene a doplnení niektorých zákonov}
 
@@ -14,9 +20,10 @@ so \acrshort{ZoITVS}, ktorý hovorí o bezpečnosti informácie v informačných
 
 \subsection{Pôsobnosť zákona vo vzťahu k mestám a obciam, prípadne ďalším organizáciám}
 
-V \acrshort{ZoKB} sú explicitne vymenované povinnosti \acrfull{NBU}(ďalej Úrad) a ďalších štátnych inštitúcií (ďalej orgány
-verejnej moci). Podobne sú explicitne vymenované povinnosti poskytovateľov digitálnych služieb a prevádzkovateľov základných
-služieb. Základnú službu a prevádzkovateľa \acrshort{ZoKB} rozumie \S 3 písm. l) a m):
+V \acrshort{ZoKB} sú explicitne vymenované povinnosti Národného bezpečnostného úradu(\acrshort{NBU})\footnote{ZoKB nazýva NBÚ
+\enquote{Úrad}.} a ďalších štátnych inštitúcií (ďalej orgány verejnej moci). Podobne sú explicitne vymenované povinnosti
+poskytovateľov digitálnych služieb a prevádzkovateľov základných služieb. Základnú službu a prevádzkovateľa \acrshort{ZoKB}
+rozumie \cite[\S 3 písm. l) a m)]{69/2018}:
 
 \begin{quote}
 \begin{enumerate}[a)] \setcounter{enumi}{11}
@@ -29,8 +36,10 @@ služieb. Základnú službu a prevádzkovateľa \acrshort{ZoKB} rozumie \S 3 p�
   \item prevádzkovateľom základnej služby orgán verejnej moci alebo osoba, ktorá prevádzkuje aspoň jednu službu podľa písmena l),
 \end{enumerate}
 \end{quote}
-V prílohe č. 1 definuje sektory (a k ním príslušné podsektory) ako bankovníctvo, doprava, energetika, verejná správa a ďalšie.
-Prevádzkovateľmi základnej služby sú orgány verejnej moci, mesta, obce a ďalšie organizácie. 
+V prílohe č. 1 zákon definuje sektory (a k ním príslušné podsektory) ako bankovníctvo, doprava, energetika a ďalšie. Jedným
+zo sektorov prílohy č.1 je aj sektor verejná správa, s podsektorom ISVS. Ústredným orgánom zodpovedným za verejnú správu
+je Úrad podpredsedu vlády pre investície a informatizáciu, v súčastnosti MIRRI. Správa ISVS je považovaná za prevádzku 
+základnej služby. Prevádzkovateľmi základnej služby sú orgány verejnej moci, mesta, obce a ďalšie organizácie. 
 
 Zoznam prevádzkovateľov základných služieb je udržiavaný a spravovaný \acrshort{NBU} a spôsob zaradenia do zoznamu je obsiahnutý
 \acrshort{ZoKB} v \S 3, ods (1) písm. k):
@@ -51,73 +60,81 @@ veľkú časť miest a obcí na zoznam prevádzkovateľov základných služieb.
 
 \subsection{Povinnosti prevádzkovateľa základnej služby}
 
-Povinnosti prevádzkovateľa základnej služby sú špecifikované \acrshort{ZoKB} v \S 19. Prevádzkovateľ základnej služby je
-povinný prijať a dodržiavať 12 mesiacov odo dňa oznámenia o zaradení do registra prevádzkovateľov základných služieb, všeobecné
-bezpečnostné opatrenia (\acrshort{ZoKB} a jeho vykonávacími predpismi) a sektorové bezpečnostné opatrenia (\acrshort{ZoITVS}
-a jeho vykonávacími predpismi). Úroveň bezpečnostných opatrení musí zohľadňovať klasifikáciu a kategorizáciu systémov\footnote{Úroveň
+Povinnosti prevádzkovateľa základnej služby sú špecifikované v \cite[\S 19, ods. (1)]{69/2018}:
+\begin{quote}
+  Prevádzkovateľ základnej služby je povinný do 12 mesiacov odo dňa oznámenia o zaradení do registra prevádzkovateľov
+  základných služieb prijať a dodržiavať všeobecné bezpečnostné opatrenia najmenej v rozsahu bezpečnostných opatrení
+  podľa § 20 a sektorové bezpečnostné opatrenia, ak sú prijaté.
+\end{quote}
+Všeobecné bezpečnostné opatrenia určuje ZoKB a jeho vykonávacie predpisy, sektorové bezpečnostné opatrenia určuje ZoITVS
+a jeho vykonávacie predpisy. Úroveň bezpečnostných opatrení musí zohľadňovať klasifikáciu a kategorizáciu systémov\footnote{Úroveň
 vyplýva zo závažností rizík vyplývajúcich z hrozieb voči systémom a aktívam organizácie.}. Prijatie bezpečnostných opatrení
 závisí od výsledkov analýzy rizík\footnote{\acrshort{ZoKB} implicitne predpokladá o už vykonanej analýze rizík.}.
 
-\acrshort{ZoKB} rámcovo stanovuje všeobecné bezpečnosné opatrenia, ktoré sú závezné pre všetky informačné systémy a siete.
-Tieto bezpečnostné opatrenia majú pokrývať všetky oblasti \acrshort{KIB}. \acrshort{ZoKB} explicitne vymenúva tieto oblasti
-a minimálne bezpečnostné opatrenia v \S 20:
+\acrshort{ZoKB} rámcovo stanovuje všeobecné bezpečnostné opatrenia, ktoré sú záväzné pre všetky informačné systémy a
+siete\footnote{V pôsobnosti ZoKB.}. Tieto bezpečnostné opatrenia majú pokrývať všetky oblasti KIB. ZoKB explicitne vymenúva
+tieto oblasti a minimálne bezpečnostné opatrenia v \cite[\S 20]{69/2018}:
 \begin{quote}
-\begin{enumerate}[(1)] \setcounter{enumi}{2}
-  \item Bezpečnostné opatrenia sa prijímajú a realizujú najmä pre oblasť
-  \begin{enumerate}[a)]
-  \item organizácie kybernetickej bezpečnosti a informačnej bezpečnosti,
-    \item riadenia rizík kybernetickej bezpečnosti a informačnej bezpečnosti,
-    \item personálnej bezpečnosti,
-    \item riadenia prístupov,
-    \item riadenia kybernetickej bezpečnosti a informačnej bezpečnosti vo vzťahoch s tretími stranami,
-    \item bezpečnosti pri prevádzke informačných systémov a sietí,
-    \item hodnotenia zraniteľností a bezpečnostných aktualizácií,
-    \item ochrany proti škodlivému kódu,
-    \item sieťovej a komunikačnej bezpečnosti,
-    \item akvizície, vývoja a údržby informačných sietí a informačných systémov,
-    \item zaznamenávania udalostí a monitorovania,
-    \item fyzickej bezpečnosti a bezpečnosti prostredia,
-    \item riešenia kybernetických bezpečnostných incidentov,
-    \item kryptografických opatrení,
-    \item kontinuity prevádzky,
-    \item auditu, riadenia súladu a kontrolných činností.
-  \end{enumerate}
+  \begin{enumerate}[(1)] \setcounter{enumi}{2}
+    \item Bezpečnostné opatrenia sa prijímajú a realizujú najmä pre oblasť
+      \begin{enumerate}[a)]
+        \item organizácie kybernetickej bezpečnosti a informačnej bezpečnosti,
+        \item riadenia rizík kybernetickej bezpečnosti a informačnej bezpečnosti,
+        \item personálnej bezpečnosti,
+        \item riadenia prístupov,
+        \item riadenia kybernetickej bezpečnosti a informačnej bezpečnosti vo vzťahoch s tretími stranami,
+        \item bezpečnosti pri prevádzke informačných systémov a sietí,
+        \item hodnotenia zraniteľností a bezpečnostných aktualizácií,
+        \item ochrany proti škodlivému kódu,
+        \item sieťovej a komunikačnej bezpečnosti,
+        \item akvizície, vývoja a údržby informačných sietí a informačných systémov,
+        \item zaznamenávania udalostí a monitorovania,
+        \item fyzickej bezpečnosti a bezpečnosti prostredia,
+        \item riešenia kybernetických bezpečnostných incidentov,
+        \item kryptografických opatrení,
+        \item kontinuity prevádzky,
+        \item auditu, riadenia súladu a kontrolných činností.
+      \end{enumerate}
 
-  \item Bezpečnostné opatrenia musia zahŕňať najmenej
-  \begin{enumerate}[a)]
-    \item určenie manažéra kybernetickej bezpečnosti, ktorý je pri návrhu, prijímaní a presadzovaní bezpečnostných opatrení
-    nezávislý od štruktúry riadenia prevádzky a vývoja služieb informačných technológií a ktorý spĺňa znalostné štandardy
-    pre výkon roly manažéra kybernetickej bezpečnosti,
-    \item detekciu kybernetických bezpečnostných incidentov,
-    \item evidenciu kybernetických bezpečnostných incidentov,
-    \item postupy riešenia a riešenie kybernetických bezpečnostných incidentov,
-    \item určenie kontaktnej osoby pre prijímanie a evidenciu hlásení,
-    \item pripojenie do komunikačného systému pre hlásenie a riešenie kybernetických bezpečnostných incidentov a centrálneho
-    systému včasného varovania.
+    \item Bezpečnostné opatrenia musia zahŕňať najmenej
+      \begin{enumerate}[a)]
+        \item určenie manažéra kybernetickej bezpečnosti, ktorý je pri návrhu, prijímaní a presadzovaní bezpečnostných opatrení
+          nezávislý od štruktúry riadenia prevádzky a vývoja služieb informačných technológií a ktorý spĺňa znalostné štandardy
+          pre výkon roly manažéra kybernetickej bezpečnosti,
+        \item detekciu kybernetických bezpečnostných incidentov,
+        \item evidenciu kybernetických bezpečnostných incidentov,
+        \item postupy riešenia a riešenie kybernetických bezpečnostných incidentov,
+        \item určenie kontaktnej osoby pre prijímanie a evidenciu hlásení,
+        \item pripojenie do komunikačného systému pre hlásenie a riešenie kybernetických bezpečnostných incidentov a centrálneho
+          systému včasného varovania.
+      \end{enumerate}
   \end{enumerate}
-\end{enumerate}
 \end{quote}
-Podrobná špecifikácia bezpečnostných opatrení, kategórií a ďalších povinností prevádzkovateľa základnej služby je uvedená
-vo Vyhláška Národného bezpečnostného úradu č. 362/2018 Z.z.
+Podrobná špecifikácia bezpečnostných opatrení, kategórií sieti a informačných systémov prevádzkovateľa základnej služby
+je uvedená vo vyhláške NBÚ č. 362/2018 Z.z.
 
-Riešenie bezpečnostných incidentov ukladá \acrshort{ZoKB} v \S 24. Prevádzkovateľ základnej služby je povinný nahlasovať
-závažné bezpečnostné incidenty. Ďalšie povinnosti sú stanovené v \S 27, kde sa píše, že \acrshort{NBU} vydáva výstrahy a
-varovania pred hrozbami a ukladá prevádzkovateľom základnej služby riešiť incident alebo vykonať reaktívne (preemptívne)
-opatrenia. Zo \acrshort{ZoITVS} vyplýva, že prevádzkovateľ by mal mať definovaný postup riešenia bezpečnostných incidentov,
-vrátane nahlasovania, vyhodnocovania a prijímania adekvátnych bezpečnostných opatrení.
+Povinnosť riešiť bezpečnostné incidenty prevádzkovateľom základnej služby ukladá  \acrshort{ZoKB} v \S 24. Prevádzkovateľ
+základnej služby je povinný nahlasovať NBÚ závažné bezpečnostné incidenty. Ďalšie povinnosti prevádzkovateľa základnej
+služby sú stanovené v \S 27, kde sa píše, že \acrshort{NBU} vydáva výstrahy a varovania pred hrozbami a ukladá
+prevádzkovateľom základnej služby riešiť incident alebo vykonať reaktívne (preemptívne) opatrenia. Zo ZoKB
+vyplýva, že prevádzkovateľ by mal mať definovaný postup riešenia bezpečnostných incidentov, vrátane nahlasovania,
+vyhodnocovania a prijímania adekvátnych bezpečnostných opatrení.
 
 \acrshort{ZoKB} síce v \S 24 stanovuje povinnosť prevádzkovateľovi základnej služby do dvoch rokoch po zaradení do zoznamu
 sa podrobiť auditu. Avšak, pre kategóriu I. Vyhláška Národného bezpečnostného úradu č. 362/2018 Z.z (doplnená a novelizovaná
 Vyhláškou Národného bezpečnostného úradu č. 264/2023 Z.z.) túto povinnosť neustanovuje\footnote{Je iba odporúčaním.}.
 
 \subsection{Tretie strany}
-\acrshort{ZoKB} ukladá v \S 19 ukladá zmluvné povinnosti prevádzkovateľa základnej služby voči tretím stranám: 
+Máloktorý správca ISVS zabezpečuje prevádzku vlastnými silami. Niektoré služby ponúkajú štátne orgány, ale množstvo
+činností(aj tie, ktoré majú dopad na KIB) sú zabezpečované tretími stranami(outsourcing). Zodpovednosť za ISVS zostáva
+na strane správcu ISVS, ktorý nemá právny dosah na externých spolupracovníkov. ZoKB označuje externých spolupracovníkov
+a dodávateľov tretie strany a upravuje ich povinnosti voči prevádzkovateľov právnou cestou \cite[\S 19]{69/2018}:
 \begin{quote}
-\begin{enumerate}[(1)] \setcounter{enumi}{1}
-  \item Prevádzkovateľ základnej služby je povinný pri výkone činnosti, ktorá priamo súvisí s dostupnosťou, dôvernosťou
-  a integritou prevádzky sietí a informačných systémov prevádzkovateľa základnej služby prostredníctvom tretej strany,
-  uzatvoriť zmluvu o zabezpečení plnenia bezpečnostných opatrení a notifikačných povinností podľa tohto zákona počas celej
-  doby výkonu tejto činnosti; pri uzatvorení zmluvy sa vykonáva analýza rizík.
+  \begin{enumerate}[(1)] \setcounter{enumi}{1}
+    \item Prevádzkovateľ základnej služby je povinný pri výkone činnosti, ktorá priamo súvisí s dostupnosťou, dôvernosťou
+      a integritou prevádzky sietí a informačných systémov prevádzkovateľa základnej služby prostredníctvom tretej strany,
+      uzatvoriť zmluvu o zabezpečení plnenia bezpečnostných opatrení a notifikačných povinností podľa tohto zákona počas celej
+      doby výkonu tejto činnosti; pri uzatvorení zmluvy sa vykonáva analýza rizík.
   \end{enumerate}
 \end{quote}
 Podľa nasledujúceho odseku (3) nie je potreba uzavrieť takúto zmluvu, ak je tretia strana prevádzkovateľom základnej alebo
@@ -147,71 +164,74 @@ a \acrshort{ZoKB} sú explicitne zviazané a vzájomne sa na seba odvolávajú. 
 
 \subsection{Terminológia}
 
-Na začiatok uvedieme definíciu pojmov informačná technológia a informačný systém z \S 2:
+Na začiatok uvedieme definíciu pojmov informačná technológia a informačný systém z \cite[\S 2]{95/2019}:
 
 \begin{quote}
-\begin{enumerate}[(1)]
-
-  \item Informačnou technológiou je na účely tohto zákona prostriedok alebo postup, ktorý slúži na spracúvanie údajov alebo
-  informácií v elektronickej podobe, najmä informačný systém, infraštruktúra, informačná činnosť a elektronické služby.
-
-  \item Informačným systémom je na účely tohto zákona funkčný celok zabezpečujúci cieľavedomú a systematickú informačnú
-  činnosť prostredníctvom technických prostriedkov a programových prostriedkov.
-
-\end{enumerate}
-\end{quote}
-Informačným systémom verejnej správy (\acrshort{ISVS}) je informačný systém v pôsobností správcu podporujúci služby verejnej
-správy. Správcom je orgán riadenia, ktorý používa \acrshort{ITVS} na účely poskytovania služby verejnej správy. Prevádzkovateľom
-je správca, orgán riadenia alebo správcom určená osoba. Služba verejnej správy je základnou službou podľa \S 3:
-
-\begin{quote}
-\begin{enumerate}[k)]
-  \item službou verejnej správy výkon právomocí, práv a povinností orgánu riadenia, ktorej rozsah a spôsob výkonu ustanovuje
-  osobitný predpis, 
+  \begin{enumerate}[(1)]
+    \item Informačnou technológiou je na účely tohto zákona prostriedok alebo postup, ktorý slúži na spracúvanie údajov alebo
+      informácií v elektronickej podobe, najmä informačný systém, infraštruktúra, informačná činnosť a elektronické služby.
+    \item Informačným systémom je na účely tohto zákona funkčný celok zabezpečujúci cieľavedomú a systematickú informačnú
+      činnosť prostredníctvom technických prostriedkov a programových prostriedkov.
+    \item Informačnou technológiou verejnej správy je informačná technológia v pôsobnosti správcu podporujúca služby
+      verejnej správy, služby vo verejnom záujme alebo verejné služby. 
   \end{enumerate}
 \end{quote}
 
-\subsection{Organizácia}
-\acrshort{MIRRI} je orgánom vedenia a celkovo riadi \acrshort{ITVS}. Správu \acrshort{ITVS} tiež vykonáva orgán riadenia,
-ktorým je\footnote{Písmená a), b) a d) sú konkrétne vládne inštitúcie, úrady, kancelárie a pod., vynechali sme ich, lebo vymenúvajú
-desiatky subjektov, ktoré nie sú malými \acrshort{ISVS}.} podľa \S 5 odseku (2): 
+Správcom podľa\cite[\S 2, ods. (5)]{95/2019} je orgán riadenia, ktorý používa \acrshort{ITVS} na účely poskytovania
+služby verejnej správy. Prevádzkovateľom podľa\cite[\S 2, ods. (6)]{95/2019} je správca, orgán riadenia alebo správcom
+určená osoba. Služba verejnej správy je základnou službou podľa \cite[\S 3]{95/2019}:
 
 \begin{quote}
-\begin{enumerate}[c)]
-  \item obec a vyšší územný celok,
-\end{enumerate}
-\begin{enumerate}[e)]
-  \item právnická osoba v zriaďovateľskej pôsobnosti alebo zakladateľskej pôsobnosti orgánu riadenia uvedeného v písmenách
-  a) až d), 
-\end{enumerate}
-\begin{enumerate}[h)]
-  \item záujmové združenie právnických osôb DataCentrum elektronizácie územnej samosprávy Slovenska, ktorého jedinými členmi
-  sú Ministerstvo financií Slovenskej republiky a Združenie miest a obcí Slovenska.
-\end{enumerate}
+  \begin{enumerate}[k)]
+    \item službou verejnej správy výkon právomocí, práv a povinností orgánu riadenia, ktorej rozsah a spôsob výkonu ustanovuje
+      osobitný predpis, 
+  \end{enumerate}
+\end{quote}
+
+\subsection{Organizácia KIB}
+Subjektom zodpovedným v podsektore ISVS sú podľa ZoITVS orgán vedenia(MIRRI) a orgány riadenia. Správu ITVS tiež vykonáva
+orgán riadenia, ktorým je\footnote{Písmená a), b) a d) sú konkrétne vládne inštitúcie, úrady, kancelárie a pod.,
+vynechali sme ich, lebo vymenúvajú desiatky subjektov spravujúcich ISVS, ktoré nie sú malými \acrshort{ISVS}.}
+podľa \cite[\S 5, ods. (2)]{95/2019}: 
+
+\begin{quote}
+  \begin{enumerate}[c)]
+    \item obec a vyšší územný celok,
+  \end{enumerate}
+  \begin{enumerate}[e)]
+    \item právnická osoba v zriaďovateľskej pôsobnosti alebo zakladateľskej pôsobnosti orgánu riadenia uvedeného v písmenách
+      a) až d), 
+  \end{enumerate}
+  \begin{enumerate}[h)]
+    \item záujmové združenie právnických osôb DataCentrum elektronizácie územnej samosprávy Slovenska, ktorého jedinými členmi
+      sú Ministerstvo financií Slovenskej republiky a Združenie miest a obcí Slovenska.
+  \end{enumerate}
 \end{quote}
 
 \subsection{Riadenie}
 
-Orgán riadenia vykonáva činnosť riadenia. Účelom riadenia je trvalo zabezpečiť a zlepšovať elektronický výkon pôsobnosti
-orgánu riadenia a rozvíjať informačné technológie\footnote{Ktorých správcom je orgán riadenia.}. Orgán riadenia plní povinnosti
-(tohto zákona) vyplývajúce z klasifikácie informácií a kategorizácie systémov, ktorých je správcom. Klasifikácia informácií
-a kategorizácia informačných systémov je prebratá zo \acrshort{ZoKB}. 
+ZoITVS rozumie pod orgánom riadenia tú organizáciu, ktorá je vlastníkom ISVS a buď si ho sama prevádzkuje alebo čiastočne
+alebo úplne zabezpečuje jeho prevádzku prostredníctvom tretích strán. Úlohou orgánu rieadenia je trvalo zabezpečiť a zlepšovať
+elektronický výkon pôsobnosti orgánu riadenia a rozvíjať informačné technológie\footnote{Ktorých správcom je orgán riadenia.}.
+Orgán riadenia plní povinnosti (tohto zákona) vyplývajúce z klasifikácie informácií a kategorizácie systémov, ktorých je
+správcom. Klasifikácia informácií a kategorizácia informačných systémov je prebratá zo \acrshort{ZoKB}. 
 
-Pri vypracúvaní vnútorných predpisov, podľa \acrshort{ZoITVS} \S 11 odsek (5), má orgán riadenia pri riadení bezpečnosti
-\acrshort{ITVS} vychádzať z medzinárodne akceptovaných štandardov vychádzajúcich z uznaných technických noriem (je to nepriamy
-odkaz na to, že môžeme vychádzať zo série štandardov ISO/IEC 27000). Ak je vyžadované vydať viac vnútorných predpisov, je
-orgán riadenia povinný vydať aspoň jeden vnútorný predpis pokrývajúci všetky potrebné predpisy. Podľa \S 12 až \S 16 je
+Podľa ZoITVS má orgán riadenia vypracovať viacero vnútorných predpisov pre rozličné oblasti KIB. Pre malé ISVS so štandardnými
+systémami je vhodné postupovať podľa ustanovenia \acrshort{ZoITVS}\cite[\S 11, ods. (5)]{95/2019} -- vychádzať z medzinárodne
+akceptovaných štandardov vychádzajúcich z uznaných technických noriem (je to nepriamy odkaz na to, že môžeme vychádzať zo série
+štandardov ISO/IEC 27000). Ak je vyžadované vydať viac vnútorných predpisov, je orgán riadenia povinný vydať aspoň jeden
+vnútorný predpis pokrývajúci všetky potrebné predpisy. Podľa \cite[\S 12 až \S 16]{95/2019} je
 vlastník \acrshort{ISVS} povinný: 
 
 \begin{enumerate}[-]
-\item zabezpečovať plynulú, bezpečnú a spoľahlivú prevádzku \acrshort{ITVS},
-\item zabezpečiť systém proti zneužitiu v súlade s týmto zákonom a všeobecne záväznými právnymi predpismi,
-\item zabezpečiť riadenie bezpečnosti,
-\item identifikovať a udržiavať zoznam svojich aktív,
-\item identifikovať kritické aktíva ovplyvňujúce dostupnosť systému,
-\item zabezpečiť pravidlá prevádzky, servisu a riešenia bezpečnostných incidentov
-\item zabezpečiť riadenie kontinuity prevádzky a
-\item zabezpečiť riadenie bezpečnosti prevádzky.
+  \item zabezpečovať plynulú, bezpečnú a spoľahlivú prevádzku \acrshort{ITVS},
+  \item zabezpečiť systém proti zneužitiu v súlade s týmto zákonom a všeobecne záväznými právnymi predpismi,
+  \item zabezpečiť riadenie bezpečnosti,
+  \item identifikovať a udržiavať zoznam svojich aktív,
+  \item identifikovať kritické aktíva ovplyvňujúce dostupnosť systému,
+  \item zabezpečiť pravidlá prevádzky, servisu a riešenia bezpečnostných incidentov
+  \item zabezpečiť riadenie kontinuity prevádzky a
+  \item zabezpečiť riadenie bezpečnosti prevádzky.
 \end{enumerate}
 
 \subsection{Bezpečnosť}
@@ -219,14 +239,13 @@ V \acrshort{ZoITVS} \S 18 je explicitne opísaný vzťah \acrshort{ZoITVS} a \ac
 základnej služby a prijíma bezpečnostné opatrenia v súlade so \acrshort{ZoKB}. \acrshort{ZoKB} je odkazovaný ako
 \textit{lex generalis} a \acrshort{ZoITVS} je k nemu vymedzený ako \textit{lex specialis}.
 
-V oblasti plánovania a organizácie, \S 19 ods. (1), je správca povinný: 
+V oblasti plánovania a organizácie\cite[\S 19 ods. (1)]{95/2019} je správca povinný: 
 
 \begin{enumerate}[-]
   \item zaviesť systém riadenia informačnej bezpečnosti (\acrshort{ISMS}),
-  \item spísať bezpečnostnú politiku,
-    %TODO toto mi nesedí
-  \item zriadiť riadiacu, výkonnú a kontrolnú zložku\footnote{V poradí garant, manažér a auditor \acrshort{KIB}.} systému
-  riadenia bezpečnosti,
+  \item napísať bezpečnostnú politiku,
+  \item zriadiť riadiacu, výkonnú a kontrolnú zložku systému
+    riadenia bezpečnosti,
   \item vypracovať bezpečnostný projekt\footnote{Vykonať analýzu rizík a zabezpečiť správu rizík.},
   \item identifikovať potrebné bezpečnostné opatrenia,
   \item určiť potrebné bezpečnostné mechanizmy a opatrenia a 
@@ -250,10 +269,14 @@ Správca pri plánovaní vytvorenia alebo nadobudnutia \acrshort{ISVS} kategoriz
 informácie, vypracuje bezpečnostný profil\footnote{Sformuluje bezpečnostné požiadavky na systém, t.j. definuje potenciálne
 hrozby, riziká, náklady, vykoná analýzu rizík, sformuluje bezpečnostné ciele a pod.} a určí osobu zodpovednú za jeho bezpečnosť.
 
+V prípade malého ISVS, riadiacu zložku môže predstavovať starosta/starostka, výkonnú zložku jeden informatik a kontrolnú
+zložku buď ten istý informatik, alebo externý spolupracovník.
+
 \subsection{Tretie strany}
-V \S 20 sú rozobraté požiadavky voči tretím stranám. Správca určuje bezpečnostné požiadavky \acrshort{ISVS}, poskytuje
-dodávateľovi \acrshort{ISVS}, \S 20 ods. (1) písm b), \enquote{pseudonymizované kópie údajov alebo fiktívne údaje na testovanie
-\acrshort{ISVS} a jeho vývoj} a zabezpečí vypracovanie bezpečnostného projektu.
+Podobne ako ZoKB, aj ZoITVS rozoznáva externých spolupracovníkov a dodávateľov. V \cite[\S 20]{95/2019} ZoITVS sú rozobraté
+požiadavky voči tretím stranám. Správca určuje bezpečnostné požiadavky \acrshort{ISVS}, poskytuje
+dodávateľovi ISVS\cite[\S 20 ods. (1) písm b)]{95/2019} \blockquote{pseudonymizované kópie údajov alebo fiktívne
+údaje na testovanie ISVS a jeho vývoj} a zabezpečí vypracovanie bezpečnostného projektu.
 
 Na druhej strane dodávateľ \acrshort{ISVS} zabezpečí dokumentáciu vývoja, používateľskú a administrátorskú príručku. Tiež
 je dodávateľ povinný preukázať dodržiavanie bezpečnostných požiadaviek určených správcom, doplniť chýbajúce bezpečnostné
@@ -265,10 +288,10 @@ Správca zabezpečuje životný cyklus \acrshort{ISVS}: jeho zavedenie do prevá
 pričom pred zavedením do prevádzky, \S 21 ods. (2):
 
 \begin{quote}
-\begin{enumerate}[a)]
-\item overí splnenie funkčných, výkonnostných a bezpečnostných požiadaviek pred zavedením do prevádzky a nezavedie do prevádzky
-  informačný systém verejnej správy, ktorý tieto požiadavky nespĺňa,
-\end{enumerate}
+  \begin{enumerate}[a)]
+    \item overí splnenie funkčných, výkonnostných a bezpečnostných požiadaviek pred zavedením do prevádzky a nezavedie do prevádzky
+      informačný systém verejnej správy, ktorý tieto požiadavky nespĺňa,
+  \end{enumerate}
 \end{quote}
 Systém zavedený v prevádzke, \S 22 \acrshort{ZoITVS}, prijíma bezpečnostné opatrenia \acrshort{ZoKB}v oblasti \enquote{k)
 zaznamenávania udalostí a monitorovania,}.
@@ -279,11 +302,11 @@ Správca je povinný vypracovať bezpečnostný projekt pre celú organizáciu a
 Bezpečnostný projekt vychádza \S 23 ods. (1)\footnote{Znovu je to odkaz na to, že môžme postupovať podľa série štandardov
 ISO/IEC 27000.}:
 \begin{quote}
-\begin{enumerate}[a)]
-  \item z bezpečnostnej politiky,
-  \item zo všeobecne akceptovaných štandardov riadenia informačných technológií, ktoré vychádzajú z uznaných technických noriem,
-  \item z metodických usmernení orgánu vedenia.
-\end{enumerate}
+  \begin{enumerate}[a)]
+    \item z bezpečnostnej politiky,
+    \item zo všeobecne akceptovaných štandardov riadenia informačných technológií, ktoré vychádzajú z uznaných technických noriem,
+    \item z metodických usmernení orgánu vedenia.
+  \end{enumerate}
 \end{quote}
 Úroveň bezpečnostného projektu je vždy najvyššia spomedzi všetkých klasifikovaných systémov v pôsobností správcu.
 
@@ -293,21 +316,21 @@ ISO/IEC 27000.}:
 Začneme citáciou\footnote{Písmená b) a d), sú vynechané, keďže podľa odseku (4) sa na malé \acrshort{ITVS} nevzťahujú.},
 ktorú budeme komentovať. Organ riadenia je povinný, \S 23 ods (3):
 \begin{quote}
-\begin{enumerate}[a)]
-  \item ak sú zaradení do registra prevádzkovateľov základných služieb podľa osobitného predpisu,\textsuperscript{24)}
-  nahlasovať spôsobom podľa osobitného predpisu \textsuperscript{25}) aj kybernetický bezpečnostný incident,\textsuperscript{26)}
-  na ktorý sa nevzťahuje povinnosť nahlasovania podľa osobitného predpisu; \textsuperscript{27)} ak nie sú do tohto registra
-  zaradení, nahlasujú takýto kybernetický bezpečnostný incident orgánu vedenia ním určeným spôsobom,
-\end{enumerate}
-\begin{enumerate}[c)]
-  \item poskytnúť orgánu vedenia súčinnosť a spoluprácu pri plnení jeho úloh podľa odseku 5,
-\end{enumerate}
-\begin{enumerate}[e)]
-  \item zasielať najmenej jedenkrát do roka orgánu vedenia zoznam aktív podľa § 19 ods. 1 písm. c),
-\end{enumerate}
-\begin{enumerate}[f)]
-  \item určiť jeden kontaktný bod na nahlasovanie kybernetických bezpečnostných incidentov podľa písmena a).
-\end{enumerate}
+  \begin{enumerate}[a)]
+    \item ak sú zaradení do registra prevádzkovateľov základných služieb podľa osobitného predpisu,\textsuperscript{24)}
+      nahlasovať spôsobom podľa osobitného predpisu \textsuperscript{25}) aj kybernetický bezpečnostný incident,\textsuperscript{26)}
+      na ktorý sa nevzťahuje povinnosť nahlasovania podľa osobitného predpisu; \textsuperscript{27)} ak nie sú do tohto registra
+      zaradení, nahlasujú takýto kybernetický bezpečnostný incident orgánu vedenia ním určeným spôsobom,
+  \end{enumerate}
+  \begin{enumerate}[c)]
+    \item poskytnúť orgánu vedenia súčinnosť a spoluprácu pri plnení jeho úloh podľa odseku 5,
+  \end{enumerate}
+  \begin{enumerate}[e)]
+    \item zasielať najmenej jedenkrát do roka orgánu vedenia zoznam aktív podľa § 19 ods. 1 písm. c),
+  \end{enumerate}
+  \begin{enumerate}[f)]
+    \item určiť jeden kontaktný bod na nahlasovanie kybernetických bezpečnostných incidentov podľa písmena a).
+  \end{enumerate}
 \end{quote}
 
 \subsubsection*{Komentár k a)}

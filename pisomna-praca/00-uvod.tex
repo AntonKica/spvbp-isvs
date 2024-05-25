@@ -1,3 +1,70 @@
 \chapter*{Úvod} % chapter* je necislovana kapitola
 \addcontentsline{toc}{chapter}{Úvod} % rucne pridanie do obsahu
 \markboth{Úvod}{Úvod} % vyriesenie hlaviciek
+
+Posledných niekoľko desaťročí prebieha informatizácia spoločnosti, v súčasnosti je vo veľmi pokročilom stave a drvivé
+množstvo informácií (takmer 100\%) je zaznamenávaných a spracovávaných v digitálnej forme. Potenciál digitálnych
+informačných a komunikačných technológií(d-IKT) si uvedomuje aj Európska únia(EÚ). Rozvoj znalostnej spoločnosti s trvalo
+udržateľným rozvojom sú hlavnými prioritami EÚ, ktoré sú rozpracované vo viacerých strategických dokumentoch, pre 
+informatizáciu spoločnosti sú najdôležitejšie \enquote{Digital Single Market Strategy}\footnote{Stratégia cielená na
+voľný pohyb digitálneho tovaru a odstraňovania prekážok v rámci Európy.} a \enquote{Digital Agenda for Europe}\footnote{Agenda
+politík určených na maximalizovanie prínosu digitálnych technológií.}. 
+
+EÚ si je vedomá, že d-IKT sa stali prvkami kritickej infraštruktúry spoločnosti, je potrebné ich chrániť a preto prijala
+\enquote{European Cybersecurity Strategy}\footnote{Stratégia cielená na budovanie odolnosti voči kybernetickým hrozbám.},
+\enquote{Network and Information Security Directive (NIS Directive)}\footnote{Smernica o bezpečnostných opatreniach
+pre zabezpečenie vysokej úrovene informačnej bezpečnosti.} a \enquote{EU Cybersecurity Act:}\footnote{Zákon na posilnenie
+agentúry ENISA a vytvorenie certifikačného rámca pre digitálne produkty.}.
+
+Ani Slovensko nezaostalo a tiež sa snaží o informatizáciu spoločnosti cez dokumenty ako \enquote{Stratégia digitálnej
+transformácie Slovenska 2030} a \enquote{Akčných plánov digitálnej transformácie Slovenska}, pre oblasť kybernetickej
+a informačnej bezpečnosti to sú \enquote{Národný program pre ochranu a obranu kritickej infraštruktúry} a
+\enquote{Národná stratégia a akčný plán kybernetickej bezpečnosti}.
+
+Nariadenia EÚ spolu s národnými stratégiami, koncepciami a akčnými plánmi sa premietli do viacerých zákonov Slovenskej
+republiky(SR). Tieto zákony podrobnejšie definujú pravidlá a upravujú povinnosti subjektov v kybernetickom priestore
+Slovenska a EÚ, sú to napr. 45/2011 Z. z.(zákon o kritickej infraštruktúre), 272/2016 Z. z.(zákon o elektronickom podpise)
+alebo 18/2018 Z. z.(zákon o ochrane osobných údajov).
+
+Najdôležitejšie zákony a vykonávacie predpisy SR stanovujúce povinnosti subjektov v kybernetickom priestore sú:
+\begin{itemize}
+  \item 69/2018 Z. z., zákon o kybernetickej bezpečnosti,
+  \item 362/2018 Z. z., vyhláška Národného bezpečnostného úradu, ktorou sa ustanovuje obsah bezpečnostných opatrení,
+    obsah a štruktúra bezpečnostnej dokumentácie a rozsah všeobecných bezpečnostných opatrení,
+  \item 95/2019 Z. z., zákon o informačných technológiách vo verejnej správe a
+  \item 179/2020 Z. z., vyhláška Úradu podpredsedu vlády Slovenskej republiky pre investície a informatizáciu, ktorou
+    sa ustanovuje spôsob kategorizácie a obsah bezpečnostných opatrení informačných technológií verejnej správy.
+\end{itemize}
+
+Vyššie uvedené právne normy určujú povinnosti v kybernetickom priestore veľkému počtu vlastníkov, prevádzkovateľov a
+správcov informačných systémov. Národný bezpečnostný úrad (podľa kompetenčného zákona 69/2018 Z.z. \cite[\S 5, ods. 1]{69/2018})
+zodpovedá za kybernetickú bezpečnosť a nedávno zaradil do registra prevádzkovateľov základných služieb mestá, obce,
+mestské časti a niektoré služby a organizácie spadajúce pod mestá. To znamená, že okrem informačných systémov verejnej
+správy(ISVS) ústredných štátnych orgánov sa prvkami kritickej infraštruktúry (podľa 69/2018 Z.z) stali aj ISVS malých 
+miest, obcí a organizácií, ktoré spadajú do najnižšej kategórie I (podľa 69/2018 Z.z a podľa 95/2019 Z.z.).
+
+
+Tu sa dostávame k veľkému problému pre SR, ktorý vyplýva z tohto zákona. Jednou z minimálnych požiadaviek 69/2018 Z.z
+\cite[\S 20, ods. 4, písm a)]{69/2018} je ustanovenie manažéra kybernetickej bezpečnosti. To znamená, že všetky subjekty
+zaradené do zoznamu prevádzkovateľov základnej služby potrebujú odborne kvalifikovaného zamestnanca zodpovedného za ochranu
+informačných systémov a dodržiavania legislatívnych povinností. Vyjadrené číselne, ide zhruba o 20 000 ľudí, ktorých SR
+nemá k dispozícií a v blízkej budúcnosti ani nebude mať\footnote{Pre tak veľké množstvo odborníkov nestačia kapacity
+vzdelávacích inštitúcií, napríklad taký Matfyz ročne vyprodukuje určite menej, ako sto odborníkov.}. Tým sme sa dostali
+k cieľom bakalárskej práce:
+\begin{itemize}
+  \item analyzovať legislatívne požiadavky,
+  \item identifikovať povinnosti prevádzkovateľa ISVS kategórie I, 
+  \item navrhnúť postup, ako splniť tieto povinnosti a
+  \item vytvoriť pomocný systém pre manažéra KIB, ktorý mu pomôže si splniť legislatívne povinnosti.
+\end{itemize}
+V nasledujúcich kapitolách sa pokúsime tieto ciele splniť a na konci zhodnotíme, do akej miery sa nám aj naozaj podarilo
+ich splniť. Najprv začneme s terminológiou, aby sme začali a následne budovali na pevnom základe. 
+
+%Bakalárskej práca sa skladá z kapitol:
+%\begin{itemize}
+%  \item základné pojmy, kde oboznámime čitateľa so základnými pojmami informačnej bezpečnosti,
+%  \item analýza právnych požiadaviek, kde analyzujeme vyššie uvedené zákony a vyhlášky kybernetického priestoru SR,
+%  \item zavádzania ISMS, kde popíšeme kroky potrebné na zavedenie systému riadenia informačnej bezpečnosti,
+%  \item systém, kde popíšeme navrhnutý systém a jeho jednotlivé časti,
+%  \item nedostatky a kam ďalej, kde rozoberieme  
+%\end{itemize}
