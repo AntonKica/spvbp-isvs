@@ -8,6 +8,9 @@ fungoval, preto by mal vlastník informačného systému zaistiť primeranú úr
 prevádzkovateľom a správcom ISVS túto povinnosť stanovuje legislatíva. V tejto kapitole analyzujeme najdôležitejšie
 zákony a vykonávacie predpisy, ktoré stanovujú bezpečnostné požiadavky na ISVS.
 
+Obsah zákonov citujeme v plnom rozsahu, aj s odkazmi, ktoré v prípade potreby ďalej rozvinieme. Vykonávacie predpisy
+rozoberáme samostatne a ich analýzu uvádzame v prílohe.
+
 
 \section{Zákon č. 69/2018 Z. z.}
 \lawsubtitle{Zákon o kybernetickej bezpečnosti a o zmene a doplnení niektorých zákonov}
@@ -16,7 +19,7 @@ Základným zákonom (\textit{lex generalis}), ktorý definuje riešenie kyberne
 Zákon č. 69/2018 Z. z. (\acrshort{ZoKB}). Bol prijatý v roku 2018 a prešiel niekoľkými novelizáciami \textit{373/2018 Z. z.},
 \textit{134/2020 Z. z.}, \textit{287/2021 Z. z.}, \textit{55/2022 Z. z.} a \textit{231/2022 Z. z.} Implementuje európsku
 smernicu \acrshort{NIS}, a preto explicitne hovorí o bezpečnosti informačných systémov a sieti vo všeobecnosti, v porovnaní
-so \acrshort{ZoITVS}, ktorý hovorí o bezpečnosti informácie v informačných technologiách verejnej správy.
+so \acrshort{ZoITVS}, ktorý hovorí o bezpečnosti informácie v informačných technológiách verejnej správy.
 
 \subsection{Pôsobnosť zákona vo vzťahu k mestám a obciam, prípadne ďalším organizáciám}
 
@@ -57,6 +60,9 @@ Zoznam prevádzkovateľov základných služieb je udržiavaný a spravovaný \a
 \end{quote}
 Pochybnosti, či je organizácia prevádzkovateľom základnej služby, vyriešilo \acrshort{NBU} vlastnou iniciatívou, keď zaradilo
 veľkú časť miest a obcí na zoznam prevádzkovateľov základných služieb.
+
+Pochybnosti, či sú mestá, obce, mestské časti a nimi spravované organizácie prevádzkovateľmi základných služieb vyriešilo
+NBÚ, tak že ich (podľa \cite[\S 5, ods. (1) písm. k)]{69/2018} zaradilo do zoznamu.
 
 \subsection{Povinnosti prevádzkovateľa základnej služby}
 
@@ -121,8 +127,8 @@ vyplýva, že prevádzkovateľ by mal mať definovaný postup riešenia bezpečn
 vyhodnocovania a prijímania adekvátnych bezpečnostných opatrení.
 
 \acrshort{ZoKB} síce v \S 24 stanovuje povinnosť prevádzkovateľovi základnej služby do dvoch rokoch po zaradení do zoznamu
-sa podrobiť auditu. Avšak, pre kategóriu I. Vyhláška Národného bezpečnostného úradu č. 362/2018 Z.z (doplnená a novelizovaná
-Vyhláškou Národného bezpečnostného úradu č. 264/2023 Z.z.) túto povinnosť neustanovuje\footnote{Je iba odporúčaním.}.
+sa podrobiť auditu. Avšak, pre kategóriu I. vyhláška NBÚ č. 362/2018 Z.z (doplnená a novelizovaná vyhláškou NBÚ č. 264/2023 Z.z.)
+túto povinnosť neustanovuje\footnote{Je iba odporúčaním.}.
 
 \subsection{Tretie strany}
 Máloktorý správca ISVS zabezpečuje prevádzku vlastnými silami. Niektoré služby ponúkajú štátne orgány, ale množstvo
@@ -149,7 +155,7 @@ Za nesplnenie alebo porušenie povinností prevádzkovateľa základnej služby 
 \subsection{Lex specialis}
 Nakoniec, podľa \acrshort{ZoKB} môže ústredný orgán definovať špecifické bezpečnostné opatrenia a vyžadovať ich zavedenie
 v sektore/podsektore, za ktorý zodpovedá. Za sektor verejnej správy, podsektor informačných systémov verejnej správy zodpovedá
-\acrfull{MIRRI}\footnote{V samotnej prílohe č. 1 \acrshort{ZoKB} je uvedený Úradu podpredsedu vlády pre investície a informatizáciu,
+\acrfull{MIRRI}\footnote{V samotnej prílohe č. 1 \acrshort{ZoKB} je uvedený Úrad podpredsedu vlády pre investície a informatizáciu,
 \acrshort{MIRRI} je jeho nástupníckym orgánom.}.
 
 \section{Zákon č. 95/2019 Z. z.}
@@ -285,7 +291,7 @@ požiadavky, upozorniť správcu na kritické časti \acrshort{ISVS}, navrhnúť
 
 \subsection{Prevádzka}
 Správca zabezpečuje životný cyklus \acrshort{ISVS}: jeho zavedenie do prevádzky, samotnú prevádzku a vyradenie z prevádzky,
-pričom pred zavedením do prevádzky, \S 21 ods. (2):
+pričom pred zavedením do prevádzky, \cite[\S 21 ods. (2)]{95/2019}:
 
 \begin{quote}
   \begin{enumerate}[a)]
@@ -293,14 +299,14 @@ pričom pred zavedením do prevádzky, \S 21 ods. (2):
       informačný systém verejnej správy, ktorý tieto požiadavky nespĺňa,
   \end{enumerate}
 \end{quote}
-Systém zavedený v prevádzke, \S 22 \acrshort{ZoITVS}, prijíma bezpečnostné opatrenia \acrshort{ZoKB}v oblasti \enquote{k)
+Systém zavedený v prevádzke\cite[\S 22]{95/2019} prijíma bezpečnostné opatrenia ZoKB v oblasti \enquote{k)
 zaznamenávania udalostí a monitorovania,}.
 
 \subsection{Bezpečnostný projekt}
 
 Správca je povinný vypracovať bezpečnostný projekt pre celú organizáciu alebo pre viacero informačných systémov v jeho správe.
-Bezpečnostný projekt vychádza \S 23 ods. (1)\footnote{Znovu je to odkaz na to, že môžme postupovať podľa série štandardov
-ISO/IEC 27000.}:
+Bezpečnostný projekt vychádza \cite[\S 23 ods. (1)]{95/2019}\footnote{Znovu je to odkaz na to, že môžme postupovať podľa série
+štandardov ISO/IEC 27000.}:
 \begin{quote}
   \begin{enumerate}[a)]
     \item z bezpečnostnej politiky,
@@ -314,7 +320,7 @@ ISO/IEC 27000.}:
 
 \subsection{Bezpečnostné incidenty}
 Začneme citáciou\footnote{Písmená b) a d), sú vynechané, keďže podľa odseku (4) sa na malé \acrshort{ITVS} nevzťahujú.},
-ktorú budeme komentovať. Organ riadenia je povinný, \S 23 ods (3):
+ktorú budeme komentovať. Organ riadenia je povinný\cite[\S 23 ods. (3)]{95/2019}:
 \begin{quote}
   \begin{enumerate}[a)]
     \item ak sú zaradení do registra prevádzkovateľov základných služieb podľa osobitného predpisu,\textsuperscript{24)}
@@ -351,7 +357,7 @@ zraniteľnosti\footnote{V zákone nie je zmienka o tom, kto bude financovať tak
 Povinnosti sú priamočiare.
 
 \subsection{Ďalšie povinnosti}
-Orgán riadenia má informačnú povinnosti voči \acrshort{MIRRI} a to poskytovať, \S 8 odsek (2), \enquote{údaje o informačných
+Orgán riadenia má informačnú povinnosti voči \acrshort{MIRRI} a to poskytovať\cite[\S 8 odsek (2)]{95/2019} \enquote{údaje o informačných
 technológiách verejnej správy na účely štatistických analýz} Ak dôjde k zmene podmienok (napr. novelizácia), v ktorých 
 \acrshort{ITVS} existujú, má orgán riadenia povinnosť šesť mesiacov, aby sa prispôsobil novým podmienkam.
 
@@ -360,8 +366,8 @@ Podľa, \S 28, odsekov (1) a (2) za orgán riadenia môže plniť povinnosti ten
 alebo zakladateľskú pôsobnosť. Inými slovami, mestá a obce môžu plniť povinnosti za organizácie, ktoré zriaďujú.
 
 \subsection{Porušenie povinností}
-Orgán vedenia, \S 29,  uloží pokutu správcovi od 500 do 35 000 eur, ak poruší povinnosti bezpečnosti \acrshort{ITVS} stanovené týmto
-zákonom.
+Orgán vedenia\cite[\S 29]{95/2019} uloží pokutu správcovi od 500 do 35 000 eur, ak poruší povinnosti bezpečnosti ITVS
+stanovené týmto zákonom.
 
 \section{Iné zákony}
 
@@ -375,4 +381,4 @@ na ochranu informácie a \acrshort{dIKT}, napríklad:
   \item Zákon o elektronických komunikáciách 452/2021 Z. z.
 \end{enumerate}
 Požiadavky vyplývajúce z týchto zákonov možno zohľadniť pri plnení povinností vyplývajúcich zo zákonov \acrshort{ZoKB} a
-\acrshort{ZoITVS}, preto sa nimi nebudeme explcitne zaoberať.
+\acrshort{ZoITVS}, preto sa nimi nebudeme explicitne zaoberať.
