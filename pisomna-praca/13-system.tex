@@ -53,7 +53,7 @@ Na ukladanie dát systému sme použili SQL databázu PostgreSQL verzie 16. S da
 \acrshort{ORM}\footnote{Z angl. \textit{object-relation mapping}, objektovo relačné mapovanie, vďaka ktorému sú triedy zmapované
 na štruktúry databázy.} frameworku Hibernate verzie 6. Pomocou Hibernate sme vyriešili problém s opakovaným kódom\footnote{Dizajnový
 problém programovacích jazykov, kde programátor musí písať opakovane veľké množstvo kódu, aby dosiahol drobnú funkcionalitu.}
-a nemuseli sme opakovane písať SQL dotazy pri zmenách štruktúry tried.
+a nemuseli sme opakovane písať \acrshort{SQL} dotazy pri zmenách štruktúry tried.
 
 Na testovanie sme využili knižnicu JUnit verzie 5. Avšak, v priebehu vývoja sme zistili, že nie je potrebné písať testy,
 ktoré by nás nanajvýš zdržiavali. Dôvodom bolo to, že pri zmenách kódu sme nepotrebovali kontrolovať funkcionalitu a 
@@ -297,7 +297,7 @@ zozbieraných dát -- reťazce znakov, zoznamy prvkov číselníkov a mapovania 
 setup} slúźi na zber dát, ktoré sme použili ako vstup pri generovaní politiky KIB.
 
 Na druhom obrázku \ref{fig:database-diagram-other-tables} vidíme schémy biznisových procesov, aplikácií, IT systémov a
-miestností. Tu sme jasnejšie videli výhodu separátnych tried a perspektívu pri budúcom vývoji softvéra, preto sme ich
+miestností. Tu sme jasnejšie videli výhodu separátnych tried a perspektívu pri budúcom vývoji softvéru, preto sme ich
 vyčlenili do samostatných tried a nie sú v zhluku dát \enquote{ISMS setup}.
 
 Trieda \enquote{ISMS setup} môže pôsobiť mohutne a určite sú v nej informácie, ktoré by sa dali vyčleniť, ináč zoskupiť

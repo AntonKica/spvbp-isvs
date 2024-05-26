@@ -1,4 +1,4 @@
-\chapter{Po bitke sú všetci\ldots}
+\chapter{Po bitke sú všetci\ldots} \label{ch:after-the-battle}
 
 Pôvodná predstava a zámer bakalárskej práce v počiatočnom štádiu výskumu a analýzy bol jednoduchý. Náš plán predstavoval
 niekoľko krokov, ktoré tvorili základ problematiky:
@@ -22,9 +22,9 @@ Na druhej strane, bakalárska práca ukázala, že takýto systém na podporu v�
   \item Podrobne sme analyzovali legislatívne požiadavky zákonov ZoKB a ZoITVS a vykonávacích predpisov 362/2018 a 179/2020
     v kapitole \ref{chapter:legal-analysis}.
   \item Zosúladili sme legislatívne požiadavky uvedených právnych noriem.
-  \item Vyjadrili sme všeobecné požiadavky právnych noriem pomocou technických noriem ISO/IEC 27001 a ISO/IEC 27002\footnote{
-      Z týchto dvoch technických noriem vychádzajú ZoKB a ZoITVS.}, s ktorými sú kompatibilné BSI 200-1,
-    BSI 200-2, BSI 200-3\ a kompendium IT-Grundschutz.
+  \item Vyjadrili sme všeobecné požiadavky právnych noriem pomocou technických noriem ISO/IEC 27001\cite{27001} a
+    ISO/IEC 27002\cite{27002}\footnote{Z týchto dvoch technických noriem vychádzajú ZoKB a ZoITVS.}, s ktorými sú
+    kompatibilné BSI 200-1, BSI 200-2, BSI 200-3\ a kompendium IT-Grundschutz.
   \item Upravili, resp. zjednodušili sme postup pri zavádzaní ISMS uvedený v metodikách BSI, aby bol zrozumiteľný aj pre
     neznalého a začínajúceho manažér KIB malého ISVS a najnižšej bezpečnostnej kategórie\footnote{Kategórie I z hľadiska
     kategorizácie sieti a informačných systémov (ZoKB) a správcu ISVS kategórie I (ZoITVS).}.
@@ -46,14 +46,14 @@ ktoré by sme mohli lepšie rozvrhnúť, lebo teraz už aj my sme generáli.
 Jednu z najväčších vecí, ktoré sme nespomenuli a sme sa jej vôbec nevenovali, je ochrana osobných údajov. Určite sme už všetci
 počuli o nariadení 2016/679 Európskej únie, tiež známe ako GDPR\footnote{Po angl. \textit{General data protection regulation},
 všeobecné nariadenie o ochrane údajov.} a vysokých sankciách udelených v prípade jeho porušenia. V organizácii by mala byť
-prítomná špeciálna osoba, ktorá sa venuje ochrane osobných údajov. Určite by bolo potrebné vysvetliť túto problematiku v
+určená zodpovedná osoba, ktorá sa venuje ochrane osobných údajov. Určite by bolo potrebné vysvetliť túto problematiku v
 systéme, no toto samo o sebe je rozsiahla oblasť hodná i svojej vlastnej záverečnej práce.
 
 \subsection*{Príbuzná legislatíva}
-V éteri sa tiež nachádza 241/2001 Z. z., zákon o ochrane utajovaných skutočností, náš systém by ho síce neriešil, ale jedna
-časť by sa mu mohla venovať, aby uviedla manažéra do kontextu. V podobnom duchy by sme mohli informovať manažéra KIB o
-zvyšných vykonávacích predpisoch ZoKB a ZoITVS, napríklad 493/2022 Z. z., o audite KIB alebo 78/2020 Z. z. o štandardoch
-pre ITVS.
+V slovenskej legislatíve existujú ďalšie zákony, ktoré sú relevantné z hľadiska KIB. Systém by mohol obsahovať prehľad a
+stručnú charakteristiku požiadaviek vyplývajúcich z týchto zákonov, aby mal manažér KIB prehľad aj o požiadavkách na
+ochranu špecifických systémov, ktoré existujú v organizácii. Ako príklad uvedieme 241/2001 Z. z. (zákon o ochrane
+utajovaných skutočnostiach), 493/2022 Z. z. (vyhláška o audite KIB) a 78/2020 Z. z. (vyhláška o štandardoch pre ITVS).
 
 \subsection*{Bezpečnostné politiky druhej úrovne}
 Politika KIB je všeobecný dokument, ktorý je síce rozsiahly, no nič špecifické nehovorí. Politiky druhej úrovne podrobnejšie
@@ -66,10 +66,11 @@ udržiavať zavedený ISMS na dostatočnej úrovni, čím sa začne sa životný
 projektov, inventarizácia a riadenie aktív, analýza a riadenie rizík.
 
 \subsection*{Kategórie II a III}
-Doposiaľ sme sa venovali iba najmenšej a z princípu najľahšej kategórií I. Síce podrobnú analýzu sme vykonali pre kategóriu
-I, no nahliadli sme aj do vyšších kategórií, kde sú požiadavky na prevádzkovateľov základných služieb a správcov ISVS
-rádovo väčšie. V krátkosti to znamená viac povinností, komplexnejšiu organizačnú štruktúru, väčší počet opatrení, zložitejšia
-politika KIB a mnoho ďalšieho skrytého v legislatívnych požiadavkách.
+Doposiaľ sme sa venovali iba najmenšej a z princípu najľahšej kategórii I\footnote{Podľa ZoKB a ZoITVS.}. Podrobnú
+analýzu sme síce vykonali pre kategóriu I, no nahliadli sme aj do vyšších kategórií, kde sú požiadavky na
+prevádzkovateľov základných služieb a správcov ISVS rádovo väčšie. V krátkosti to znamená viac povinností, komplexnejšiu
+organizačnú štruktúru, väčší počet opatrení, zložitejšia politika KIB a mnoho ďalšieho skrytého v legislatívnych
+požiadavkách.
 
 \subsection*{Modulárnosť}
 Vieme si zhruba predstaviť, aký veľký by vedel byť tento systém. V súvislosti s predchádzajúcim bodom, niektoré jeho časti
@@ -78,13 +79,12 @@ ISMS.} a možnosť zvoliť si potrebné časti by sprehľadnila systém.
 
 
 \subsection*{Používatelia systému}
-Pre náš systém je používateľ každý a súčasne nikto, chýba mu správa používateľov -- prihlasovanie sa. Prístup k systému
-by potom mohli mať aj iní zamestnanci, pričom by sa nedostali k údajom, ktoré nie sú pre nich určené. Manažér KIB by mal
-možnosť využiť systém na vzdelávanie alebo prípravu dotazníkov -- opýtaná osoba by sa prihlásila, dotazník vyplnila a
-odpovede by boli priamo uložené a prístupné v systéme.
+Systém bol pôvodné navrhovaný iba pre manažéra KIB, no obsahuje veľa zaujímavých a užitočných informácií, ktoré by sa dali
+doplniť o moduly pre vzdelávanie a získavanie dát (dotazníky pre zamestnancov). Potom by však bolo potrebné vyriešiť
+správu systému, definovať roly a vyriešiť riadenie prístupu.
 
 Je to aj otázka dostupnosti, čo ak by náš systém (alebo jeho derivácia) bola v budúcnosti úspešná? Malé ISVS by si nemuseli
-  robiť starosti s inštaláciou systému, ba priam systém by bežal vo vl=dnom cloude. Na to ale treba vyriešiť autentifikáciu
+robiť starosti s inštaláciou systému, ba priam systém by bežal vo vládnom cloude. Na to ale treba vyriešiť autentifikáciu
 a autorizáciu používateľov systému.
 
 \subsection*{Upozornenia, správy a hlásenia}
@@ -98,8 +98,8 @@ Zákon sa zvyknú meniť, ale ako by náš systém riešil zmeny zákonov je eš
 systému bez toho, aby sme o tom nejak informovali používateľa. Zatiaľ nemáme predstavu o vhodnom spôsobe, ako tento problém
 vyriešiť.
 
-\subsection*{Zamestnanci a role}
-Problém s tým, ako spracovávame zamestnancov a role sme už naštiepili pri pohľade na databázu a tabuľku \enquote{ISMS setup}.
+\subsection*{Zamestnanci a roly}
+Problém s tým, ako spracovávame zamestnancov a roly sme už spomenuli pri pohľade na databázu a tabuľku \enquote{ISMS setup}.
 Bolo by potrebné vytvoriť vhodné triedy na reprezentáciu vzťahov zamestnancov, rolí, vlastníkov, aktív, procesov a pod.
 Manažér KIB by lepšie vedel \enquote{cestovať} v systéme cez rôzne prepojenia, čo by sprehľadnilo navigáciu v systéme.
 Tiež by to umožnilo ďalšiu funkcionalitu, napr. pre roly KIB by bola možná kontrola konfliktu záujmov, na čo by mohol
@@ -124,15 +124,14 @@ adresovať v karte \enquote{legislatíva}, kde by sme mali prítomné zákony a 
 
 \subsection*{Používateľská príručka}
 Bakalárska práca ani systém neobsahujú žiadnu používateľskú príručku. Vypracovanie používateľskej príručky, návodov a
-dokumentácie systému by bolo esenciálne pre používateľov, ktorý by chceli prakticky používať náš systém.
+dokumentácie systému by bolo podstatné pre používateľov, ktorý by chceli prakticky používať náš systém.
 
 
 
 \section{Zhrnutie}
-
-Praktický návrhov a zlepšení vie byť nespočetne veľa, preto by sme si na koniec dovolili zhrnúť, čo z tejto bakalárskej
-práce je použiteľné a čo by bolo ešte potrebné urobiť, aby náš systém bol plnohodnotný. Použiteľné časti našej bakalárskej
-prace by sme zhrnuli na:
+Praktických návrhov a zlepšení vie byť nespočetne veľa, preto zhrnieme čo z tejto bakalárskej práce je použiteľné a čo
+by bolo ešte potrebné urobiť, aby náš systém bol plnohodnotný. Použiteľné časti našej bakalárskej prace by sme zhrnuli
+na:
 \begin{itemize}
   \item analýza právnych predpisov,
   \item analýza právnych požiadaviek,
@@ -151,10 +150,10 @@ na:
   \item rozšírenie o kategórie II a III úrovne,
   \item modulárnosť systému,
   \item upozornenia, správy, hlásenia a kontrola stavu ISMS,
-  \item systémoví používatelia a
+  \item správa používateľov a
   \item používateľská príručka.
 \end{itemize}
 
-Pri vypracovaní bakalárskej práce a jej systému sme sa dotli iba špičky ľadovca, ďalej zostáva preskúmať to, čo sa skrýva
+Pri vypracovaní bakalárskej práce a jej systému sme sa dotkli iba špičky ľadovca, ďalej zostáva preskúmať to, čo sa skrýva
 pod hladinou vody.
 
