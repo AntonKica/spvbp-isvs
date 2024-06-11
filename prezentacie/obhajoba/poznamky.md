@@ -39,6 +39,18 @@ neprináša nič nové a zbytočne brzdí
 1. Zhrnutie a možnosti ďalšej práce v oblasti
 
 
+### rámcový postup
+
+1. uvedieme do situácie v EÚ a na SK
+1. legislatíva
+1. trochu terminologie - kto to je manažér, čo to je KIB, ISMS?
+1. ISO/IEC a BSI
+1. prezentácia systému
+1. možné pokračovanie
+1. ???
+1. koniec
+
+
 ## poznámky k prezentácií
 
 ### [01] úvodná strana
